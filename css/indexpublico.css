@@ -26,13 +26,13 @@ body {
     margin-left: 207px; 
     min-height: 100vh;
     background-color: #CBD5E1;
-    padding: 2rem; /* Restauramos el padding general */
+    padding: 2rem; 
 }
 
 .logo {
     width: 100%;
     height: 150px;
-    background-image: url('/img/Login.png');
+    background-image: url('/recursos/img/Login.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -104,16 +104,15 @@ body {
     padding-left: 1rem;
 }
 
-/* Carrusel con las modificaciones solicitadas */
 .carruselcontenedor {
     position: relative;
-    width: calc(100% - 40px); /* Restamos 40px (20px de cada lado) */
-    max-width: none; /* Eliminamos el límite máximo */
-    margin: 0 auto; /* Centrado con margen automático */
+    width: calc(100% - 40px); 
+    max-width: none; 
+    margin: 0 auto; 
     overflow: hidden;
-    border-radius: 16px; /* Bordes redondeados aumentados */
+    border-radius: 16px; 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    height: 350px; /* Mantenemos la altura original */
+    height: 350px; 
 }
 
 .carrusel {
@@ -134,10 +133,9 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: transform 5s ease; /* Transición más suave */
+    transition: transform 5s ease;
 }
 
-/* Efecto de zoom sutil al pasar el mouse */
 .carrusel-slide:hover img {
     transform: scale(1.03);
 }
