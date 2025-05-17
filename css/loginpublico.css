@@ -23,7 +23,7 @@ body {
 .login-container img {
     width: 300px;
     height: auto;
-    margin-bottom: 30px;
+    margin-bottom: 0px; /* Reducido de 30px a 15px */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -38,13 +38,13 @@ body {
 
 .login-form h1 {
     font-size: 22px;
-    margin-bottom: 8px;
+    margin-bottom: 5px; /* Reducido de 8px a 5px */
     font-weight: 600;
 }
 
 .subtitle {
     color: #333333;
-    margin-bottom: 30px;
+    margin-bottom: 15   px; /* Reducido de 30px a 15px */
     font-size: 14px;
 }
 
@@ -83,7 +83,7 @@ body {
     margin-top: 10px;
 }
 
-.buttons-container button {
+.buttons-container button a{
     flex: 1;
 }
 
@@ -100,6 +100,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
     font-family: 'Martian Mono', monospace;
+    text-decoration: none;
 }
 
 .login-btn:hover, .register-btn:hover {
@@ -128,4 +129,42 @@ body {
     display: none;
     margin-bottom: 16px;
     text-align: left;
+}
+
+/* Estilo para el campo de fecha */
+.input-group input[type="date"] {
+    /* Asegura que tenga la misma apariencia que otros inputs */
+    padding: 12px;
+    font-family: 'Martian Mono', monospace;
+    /* Estilos específicos para navegadores */
+}
+
+/* Estilo para el selector de fecha en navegadores WebKit */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.5); /* Cambia el color del icono del calendario */
+}
+
+/* Mejora la apariencia en Firefox */
+input[type="date"]::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* Enlace "Volver a inicio" */
+.back-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.back-link a {
+    color: #000000;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.back-link a:hover {
+    text-decoration: none;
 }

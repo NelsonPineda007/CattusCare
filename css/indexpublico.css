@@ -7,7 +7,7 @@ body {
 
 .vertical-bar {
     background-color: white;
-    width: 201px; 
+    width: 206px; 
     height: 100vh;
     position: fixed;
     left: 0;
@@ -113,6 +113,7 @@ body {
     border-radius: 16px; 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     height: 350px; 
+    margin-top: -1rem;
 }
 
 .carrusel {
@@ -179,4 +180,51 @@ body {
 
 .carruselcontenedor:hover .carrusel {
     animation-play-state: paused;
+}
+
+.buscador {
+    width: calc(100% - 40px);
+    margin: -1.5rem auto 0;
+    max-width: none;
+}
+
+.buscadorbox {
+    position: relative;
+    width: 42%;
+    margin: 0 auto; 
+    border-radius: 16px; 
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #3B82F6; 
+    z-index: 2;
+}
+
+.buscadorinput {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3.5rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-family: "Martian Mono", monospace;
+    background-color: white;
+    color: #333;
+    border-radius: 16px; 
+}
+
+.buscadorinput::placeholder {
+    color: #9CA3AF;
+    opacity: 1;
+}
+
+.buscadorinput:focus {
+    box-shadow: 0 0 0 2px #3B82F6;
 }
