@@ -1,7 +1,8 @@
-    body{
-    font-family: 'Martian Mono', monospace;
+    body {
+      font-family: 'Martian Mono', monospace;
     }
-    /* Remove border from buttons */
+        /* Remove border from buttons */
+        /*HOVER DE LOS BOTONES DEL NAVBAR*/
     .nav-button {
       border: none;
       position: relative;
@@ -60,10 +61,4 @@
       display: flex;
       justify-content: center;
     }
-
-    /*Main Letras de inicio y bienvenido*/
-
-    #letra_inicio{
-      font-size: 24pt;
-      font-weight: 700;
-    }
+        /*HOVER DE LOS BOTONES DEL NAVBAR (AQUI TERMINA)*/

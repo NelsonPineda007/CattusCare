@@ -1,202 +1,162 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dashboard</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../../css/dashboard.css" />
-  </head>
+<!DOCTYPE html>
+<html lang="es">
 
-  <body class="bg-white">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/dashboard.css" />
+  <link rel="icon" href="../../recursos/img/Login.png" type="image/png">
+
+</head>
+
+<body class="bg-white">
+  <main>
     <div class="min-h-screen flex flex-col">
       <div class="flex flex-1 border-4 border-black">
-        <!-- Navbar wider and vertically centered -->
-        <div
-          class="flex flex-col border-r-4 border-black p-2 justify-between w-32 items-center text-left"
-          style="align-content: center"
-        >
+        <!-- Navbar lateral -->
+        <nav class="flex flex-col border-r-4 border-black p-2 justify-between w-32 items-center text-left">
           <div class="flex flex-col items-center space-y-6 w-full">
-            <div
-              class="w-24 h-24 flex items-center justify-center text-lg font-bold"
-            >
+            <div class="w-24 h-24 flex items-center justify-center text-lg font-bold">
               <a href="dashboard.html">
-                <img src="../../recursos/img/Login.png" alt="" />
+                <img src="../../recursos/img/Login.png" alt="Logo" />
               </a>
             </div>
             <div class="space-y-6 w-full">
-              <button
-                type="button"
-                class="nav-button w-full h-20 flex items-center space-x-3 pl-4 font-semibold text-sm rounded-md"
-              >
+              <button onclick="location.href='dashboard.html'" type="button"
+                class="nav-button w-full h-20 flex items-center space-x-3 pl-4 font-semibold text-sm rounded-md">
                 <i class="fas fa-home text-xl"></i>
                 <span>Inicio</span>
               </button>
-              <button
-                type="button"
-                class="nav-button w-full h-20 flex items-center space-x-3 pl-4 font-semibold text-sm rounded-md"
-              >
+              <button onclick="location.href='chat.html'" type="button"
+                class="nav-button w-full h-20 flex items-center space-x-3 pl-4 font-semibold text-sm rounded-md">
                 <i class="fas fa-comments text-xl"></i>
                 <span>Chat</span>
               </button>
-              <button
-                type="button"
-                class="nav-button w-full h-20 flex items-center space-x-3 pl-4 font-semibold text-sm rounded-md"
-              >
+              <button type="button"
+                class="nav-button w-full h-20 flex items-center space-x-3 pl-4 font-semibold text-sm rounded-md">
                 <i class="fas fa-calendar-alt text-xl"></i>
                 <span>Citas</span>
               </button>
-              <button
-                type="button"
-                class="nav-button w-full h-20 flex items-center space-x-3 pl-4 font-semibold text-sm rounded-md"
-              >
+              <button type="button"
+                class="nav-button w-full h-20 flex items-center space-x-3 pl-4 font-semibold text-sm rounded-md">
                 <i class="fas fa-file-medical text-xl"></i>
                 <span>Receta</span>
               </button>
             </div>
           </div>
           <div class="flex flex-col w-full items-center">
-            <div class="darkmode-container">
-              <button
-                id="darkModeToggle"
-                class="flex items-center gap-2 px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300"
-              >
+            <div class="darkmode-container mb-2">
+              <button id="darkModeToggle"
+                class="flex items-center gap-2 px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300">
                 <i id="darkModeIcon" class="fas fa-moon"></i>
                 <span id="darkModeText">Dark Mode</span>
               </button>
             </div>
             <div class="perfil-container">
-              <div
-                class="no-hover-button w-full cursor-default select-none max-w-[140px] border-0"
-              >
+              <div class="no-hover-button w-full cursor-default select-none max-w-[140px] border-0">
                 <i class="fas fa-user text-xl"></i>
                 <span>Perfil</span>
               </div>
             </div>
           </div>
-        </div>
-        <!-- Main content -->
+        </nav>
+
+        <!-- Contenido principal -->
         <div class="flex flex-col flex-1 p-2 space-y-4 border-r-4 border-black">
-          <div class="w-48 h-16 border-4 border-black"></div>
+          <!-- Contenido de bienvenida -->
+          <section class="w-full h-auto border-4 border-white p-2">
+            <h2 id="letra_inicio" class="text-lg font-semibold">Inicio</h2>
+            <p>Bienvenido @Doctor</p>
+          </section>
+
+          <!-- Tarjetas o paneles -->
           <div class="flex space-x-4">
             <div class="flex-1 h-24 border-4 border-black"></div>
             <div class="flex-1 h-24 border-4 border-black"></div>
           </div>
+
           <div class="w-full h-20 border-4 border-black"></div>
         </div>
-        <!-- Right section wider -->
-        <div class="flex flex-col p-2 space-y-4 w-64">
+
+        <!-- Sección lateral derecha -->
+        <aside class="flex flex-col p-2 space-y-4 w-64">
           <div class="h-32 border-4 border-black"></div>
           <div class="h-48 border-4 border-black"></div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-100 border-t border-black py-6 font-mono">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Columna 1: Logo -->
+        <div class="flex flex-col items-center md:items-start">
+          <a href="dashboard.html" class="mb-4">
+            <img src="../../recursos/img/Login.png" alt="Logo" class="h-16" />
+          </a>
+          <p class="text-gray-700 text-sm">
+            © 2024 Tu Empresa. Todos los derechos reservados.
+          </p>
+        </div>
+
+        <!-- Columna 2: Enlaces rápidos -->
+        <div class="flex flex-col items-center md:items-start">
+          <h3 class="text-lg font-bold mb-4">Enlaces rápidos</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="text-gray-700 hover:text-black transition">Inicio</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-black transition">Chat</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-black transition">Citas</a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-700 hover:text-black transition">Receta</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Redes sociales -->
+        <div class="flex flex-col items-center md:items-start">
+          <h3 class="text-lg font-bold mb-4">Síguenos</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-700 hover:text-blue-500 transition"><i
+                class="fab fa-facebook text-2xl"></i></a>
+            <a href="#" class="text-gray-700 hover:text-pink-500 transition"><i
+                class="fab fa-instagram text-2xl"></i></a>
+            <a href="#" class="text-gray-700 hover:text-blue-400 transition"><i class="fab fa-twitter text-2xl"></i></a>
+          </div>
         </div>
       </div>
-      <footer class="bg-gray-100 border-t-4 border-black py-6 font-mono">
-        <div class="container mx-auto px-4">
-          <!-- Contenido del footer en columnas (útil para enlaces) -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Columna 1: Logo o información -->
-            <div class="flex flex-col items-center md:items-start">
-              <a href="dashboard.html" class="mb-4">
-                <img
-                  src="../../recursos/img/Login.png"
-                  alt="Logo"
-                  class="h-16"
-                />
-              </a>
-              <p class="text-gray-700 text-sm">
-                © 2024 Tu Empresa. Todos los derechos reservados.
-              </p>
-            </div>
 
-            <!-- Columna 2: Enlaces rápidos -->
-            <div class="flex flex-col items-center md:items-start">
-              <h3 class="text-lg font-bold mb-4">Enlaces rápidos</h3>
-              <ul class="space-y-2">
-                <li>
-                  <a href="#" class="text-gray-700 hover:text-black transition"
-                    >Inicio</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="text-gray-700 hover:text-black transition"
-                    >Chat</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="text-gray-700 hover:text-black transition"
-                    >Citas</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="text-gray-700 hover:text-black transition"
-                    >Receta</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <!-- Columna 3: Redes sociales -->
-            <div class="flex flex-col items-center md:items-start">
-              <h3 class="text-lg font-bold mb-4">Síguenos</h3>
-              <div class="flex space-x-4">
-                <a
-                  href="#"
-                  class="text-gray-700 hover:text-blue-500 transition"
-                >
-                  <i class="fab fa-facebook text-2xl"></i>
-                </a>
-                <a
-                  href="#"
-                  class="text-gray-700 hover:text-pink-500 transition"
-                >
-                  <i class="fab fa-instagram text-2xl"></i>
-                </a>
-                <a
-                  href="#"
-                  class="text-gray-700 hover:text-blue-400 transition"
-                >
-                  <i class="fab fa-twitter text-2xl"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Línea divisoria y copyright -->
-          <div
-            class="border-t border-gray-300 mt-6 pt-4 text-center text-sm text-gray-600"
-          >
-            <p>© 2024 CattusCare. Todos los derechos reservados.</p>
-          </div>
-        </div>
-      </footer>
-      <script>
-        // Toggle básico (sin localStorage ni preferencia del sistema)
-        document
-          .getElementById("darkModeToggle")
-          .addEventListener("click", () => {
-            document.documentElement.classList.toggle("dark");
-            const icon = document.getElementById("darkModeIcon");
-            const text = document.getElementById("darkModeText");
-            icon.classList.toggle("fa-moon");
-            icon.classList.toggle("fa-sun");
-            text.textContent = document.documentElement.classList.contains(
-              "dark"
-            )
-              ? "Light Mode"
-              : "Dark Mode";
-          });
-      </script>
+      <!-- Copyright -->
+      <div class="border-t border-gray-300 mt-6 pt-4 text-center text-sm text-gray-600">
+        <p>© 2024 CattusCare. Todos los derechos reservados.</p>
+      </div>
     </div>
-  </body>
+  </footer>
+
+  <script>
+    document
+      .getElementById("darkModeToggle")
+      .addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        const icon = document.getElementById("darkModeIcon");
+        const text = document.getElementById("darkModeText");
+        icon.classList.toggle("fa-moon");
+        icon.classList.toggle("fa-sun");
+        text.textContent = document.documentElement.classList.contains("dark")
+          ? "Light Mode"
+          : "Dark Mode";
+      });
+  </script>
+</body>
+
 </html>
