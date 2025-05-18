@@ -21,6 +21,8 @@ body {
     z-index: 10;
 }
 
+
+
 .content-area {
     flex: 1;
     margin-left: 207px; 
@@ -38,6 +40,16 @@ body {
     background-position: center;
     margin: 0 auto 2rem; 
 }
+
+.darkmode-container {
+      margin-top: 3rem;
+      margin-bottom: 0.5rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    
 
 .iconos {
     display: flex;
@@ -93,7 +105,7 @@ body {
 .profile-container {
     margin-top: auto; 
     width: 100%;
-    padding: 2.5rem 0;
+    padding: 1rem 0;
 }
 
 .iconos {
@@ -113,7 +125,7 @@ body {
     border-radius: 16px; 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     height: 350px; 
-    margin-top: -1rem;
+    margin-top: -0.5rem;
 }
 
 .carrusel {
@@ -227,4 +239,164 @@ body {
 
 .buscadorinput:focus {
     box-shadow: 0 0 0 2px #3B82F6;
+}
+
+
+.doctores-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 9px;
+    padding: 20px;
+}
+
+.doctor-carta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.doctor-carta::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23999999"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>');
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.doctor-carta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.doctor-info {
+    flex: 1;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nombredoc {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.espdoc {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.doctorestrellas {
+    margin-top: 5px;
+}
+
+.estrellas {
+    display: flex;
+    color: #FFD700;
+}
+
+.estrellas svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 2px;
+}
+
+
+.cartas-abajo-contenedor {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    gap: 25px;
+    padding: 0 20px 20px;
+    margin-top: 0;
+    width: calc(100% - 0px);
+    margin-left: 0;
+    box-sizing: border-box;
+}
+
+.cita-especial,
+.recordatorio-especial {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos específicos para citas */
+.cita-especial h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.cita-especial-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+.num-especial {
+    background: #f0f0f0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.info-especial strong {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.info-especial span {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Estilos específicos para recordatorios */
+.recordatorio-especial h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.lista-especial {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.lista-especial li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+/* Enlace común */
+.enlace-especial {
+    margin-top: auto;
+    color: #3B82F6;
+    text-decoration: none;
+    font-weight: 500;
+    align-self: flex-start;
 }

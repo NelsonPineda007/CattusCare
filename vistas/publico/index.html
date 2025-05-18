@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="/css/indexpublico.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/heroicons/3.0.1/heroicons.min.css" />
     <link rel="icon" href="/recursos/img/icon/Login.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
     <title>CattusCare</title>
 </head>
 <body>
@@ -53,6 +56,15 @@
             <span class="icono-texto">Recetas</span>
         </a>
     </div>
+
+         <div class="flex flex-col w-full items-center">
+            <div class="darkmode-container mb-2">
+              <button id="darkModeToggle"
+                class="flex items-center gap-2 px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300">
+                <i id="darkModeIcon" class="fas fa-moon"></i>
+                <span id="darkModeText">Dark Mode</span>
+              </button>
+            </div>
     <div class="profile-container">
         <a href="#" class="icono-con-texto">
             <svg class="hero-icon" fill="currentColor" viewBox="0 0 24 24">
@@ -101,8 +113,213 @@
             <input type="text" placeholder="Busca un Medico por nombre, apellido o especialidad" class="buscadorinput">
         </div>
     </div>
+
+
+<div class="doctores-contenedor">
+    <div class="doctor-carta">
+        <div class="doctor-info">
+            <div class="nombredoc">Dr. Juan Pérez</div>
+            <div class="espdoc">Cardiólogo</div>
+            <div class="doctorestrellas">
+                <div class="estrellas">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="doctor-carta">
+        <div class="doctor-info">
+            <div class="nombredoc">Dr. Juan Pérez</div>
+            <div class="espdoc">Cardiólogo</div>
+            <div class="doctorestrellas">
+                <div class="estrellas">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="doctor-carta">
+        <div class="doctor-info">
+            <div class="nombredoc">Dra. María Gómez</div>
+            <div class="espdoc">Pediatra</div>
+            <div class="doctorestrellas">
+                <div class="estrellas">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="doctor-carta">
+        <div class="doctor-info">
+            <div class="nombredoc">Dr. Juan Pérez</div>
+            <div class="espdoc">Cardiólogo</div>
+            <div class="doctorestrellas">
+                <div class="estrellas">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="doctor-carta">
+        <div class="doctor-info">
+            <div class="nombredoc">Dra. María Gómez</div>
+            <div class="espdoc">Pediatra</div>
+            <div class="doctorestrellas">
+                <div class="estrellas">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="doctor-carta">
+        <div class="doctor-info">
+            <div class="nombredoc">Dra. María Gómez</div>
+            <div class="espdoc">Pediatra</div>
+            <div class="doctorestrellas">
+                <div class="estrellas">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cartas-abajo-contenedor">
+        <div class="cita-especial">
+            <h3>Próximas citas</h3>
+            <div class="cita-especial-item">
+                <span class="num-especial">1</span>
+                <div class="info-especial">
+                    <strong>Dra. Ana Martinez</strong>
+                    <span>10/05/2025 16:00 - Control rutinario</span>
+                </div>
+            </div>
+            <div class="cita-especial-item">
+                <span class="num-especial">2</span>
+                <div class="info-especial">
+                    <strong>Dr. Nelson Fienda</strong>
+                    <span>15/05/2025 11:30 - Seguimiento tratamiento</span>
+                </div>
+            </div>
+            <a href="#" class="enlace-especial">Ver más</a>
+        </div>
+
+        <div class="recordatorio-especial">
+            <h3>Recordatorios</h3>
+            <ul class="lista-especial">
+                <li>Tomar medicamento a las 08:00</li>
+                <li>Tomar medicamento a las 10:00</li>
+                <li>Cita pendiente</li>
+            </ul>
+            <a href="#" class="enlace-especial">Ver más</a>
+        </div>
+    </div>
+    
+    
+  <script>
+    document
+      .getElementById("darkModeToggle")
+      .addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        const icon = document.getElementById("darkModeIcon");
+        const text = document.getElementById("darkModeText");
+        icon.classList.toggle("fa-moon");
+        icon.classList.toggle("fa-sun");
+        text.textContent = document.documentElement.classList.contains("dark")
+          ? "Light Mode"
+          : "Dark Mode";
+      });
+  </script>
+</body>
+
 </main>
-
-
 </body>
 </html>
