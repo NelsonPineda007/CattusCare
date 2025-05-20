@@ -63,39 +63,40 @@ body {
     gap: 1.5rem;
     /* increased space between buttons */
     padding-bottom: 0.5rem;
+}
 
-    /*HOVER DE LOS BOTONES DEL NAVBAR (AQUI TERMINA)*/
-    /* No hover for perfil and dark mode buttons */
-    .no-hover-button {
-        border: 4px solid black;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        height: 5rem;
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        font-weight: 600;
-        font-size: 0.875rem;
-        color: inherit;
-        cursor: default;
-        user-select: none;
-        background: transparent;
-        margin-top: 0;
-        margin-bottom: 0;
-        justify-content: center;
-    }
+/*HOVER DE LOS BOTONES DEL NAVBAR (AQUI TERMINA)*/
+/* No hover for perfil and dark mode buttons */
+.no-hover-button {
+    border: 4px solid black;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: inherit;
+    cursor: default;
+    user-select: none;
+    background: transparent;
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: center;
+}
 
-    .darkmode-container {
-        margin-top: 3rem;
-        margin-bottom: 0.5rem;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+.darkmode-container {
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
-    .perfil-container {
-        margin-bottom: 2rem;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+.perfil-container {
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

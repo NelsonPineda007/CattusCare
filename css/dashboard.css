@@ -1,115 +1,104 @@
-    body {
-      font-family: 'Martian Mono', monospace;
-    }
+body {
+  font-family: 'Martian Mono', monospace;
+}
 
-    /* Remove border from buttons */
-    .nav-button {
-      border: none;
-      position: relative;
-      overflow: visible;
-      padding-right: 0;
-    }
+/* Nav buttons styling */
+.nav-button {
+  border: none;
+  position: relative;
+  overflow: visible;
+  padding-right: 0;
+}
 
-    /* Hover effect: small red highlight exactly at right edge and top border, shifted further right with smooth rounded edges */
-    .nav-button {
-      position: relative;
-    }
+/* Hover effect for nav buttons */
+.nav-button::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  height: calc(100% + 12px);
+  background-color: rgba(220, 38, 38, 1); /* Tailwind red-600 */
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 10;
+  box-shadow: 0 0 12px rgba(220, 38, 38, 0.6);
+  width: 0;
+  border-radius: 8px;
+}
 
-    .nav-button::after {
-      content: "";
-      position: absolute;
-      top: -6px;
-      /* align with navbar top border */
-      right: -10px;
-      /* shifted further right */
-      height: calc(100% + 12px);
-      /* extend height to cover top border with padding */
-      background-color: rgba(220, 38, 38, 1);
-      /* Tailwind red-600 */
-      opacity: 0;
-      transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      pointer-events: none;
-      z-index: 10;
-      box-shadow: 0 0 12px rgba(220, 38, 38, 0.6);
-      width: 0;
-      border-radius: 8px 8px 8px 8px;
-      /* slightly smaller radius */
-    }
+.nav-button:hover::after {
+  opacity: 1;
+  width: 2.5%;
+}
 
-    .nav-button:hover::after {
-      opacity: 1;
-      width: 2.5%;
-    }
+/* Profile button styling */
+.perfil-button {
+  width: 100%;
+  max-width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 
-    /* Formal profile button */
-    .perfil-button {
-      @apply w-full max-w-[180px] flex items-center justify-center gap-3 px-4 py-2 border border-gray-700 rounded-md text-gray-700 font-semibold hover:bg-gray-100 transition-colors duration-300;
-      cursor: pointer;
-      user-select: none;
-      text-decoration: none;
-    }
+.perfil-button i {
+  font-size: 1.25rem;
+}
 
-    .perfil-button i {
-      font-size: 1.25rem;
-    }
+/* Navbar bottom section */
+.navbar-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1.5rem;
+  padding-bottom: 0.5rem;
+}
 
-    .perfil-button:hover {
-      background-color: #f3f4f6;
-      /* Tailwind gray-100 */
-      color: #1f2937;
-      /* Tailwind gray-800 */
-      border-color: #1f2937;
-    }
+/* Non-interactive buttons */
+.no-hover-button {
+  border: 4px solid black;
+  padding: 0 1rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: inherit;
+  cursor: default;
+  user-select: none;
+  background: transparent;
+  margin: 0;
+  justify-content: center;
+}
 
-    /* Adjust spacing between dark mode and profile */
-    .navbar-bottom {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      gap: 1.5rem;
-      /* increased space between buttons */
-      padding-bottom: 0.5rem;
-    }
+/* Container styles */
+.darkmode-container {
+  margin: 3rem 0 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
-    /* No hover for perfil and dark mode buttons */
-    .no-hover-button {
-      border: 4px solid black;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      height: 5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      font-weight: 600;
-      font-size: 0.875rem;
-      color: inherit;
-      cursor: default;
-      user-select: none;
-      background: transparent;
-      margin-top: 0;
-      margin-bottom: 0;
-      justify-content: center;
-    }
+.perfil-container {
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
-    .darkmode-container {
-      margin-top: 3rem;
-      margin-bottom: 0.5rem;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-
-    .perfil-container {
-      margin-bottom: 2rem;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-
-    /*Main Letras de inicio y bienvenido*/
-
-    #letra_inicio {
-      font-size: 24pt;
-      font-weight: 700;
-    }
+/* Text styles */
+#letra_inicio {
+  font-size: 24pt;
+  font-weight: 700;
+}
