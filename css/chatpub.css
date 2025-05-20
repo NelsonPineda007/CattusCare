@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: "Martian Mono", monospace;
+    display: flex;
+    min-height: 100vh;
+}
+
+.vertical-bar {
+    background-color: white;
+    width: 206px; 
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding: 0.5rem 0.5rem;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.logo {
+    width: 100%;
+    height: 150px;
+    background-image: url('/recursos/img/Login.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto 2rem; 
+}
+
+.darkmode-container {
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    }
+
+    
+
+.iconos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.icono-con-texto {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    gap: 0.8rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    transition: all 0.3s;
+}
+
+.hero-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    color: #333;
+    transition: all 0.3s;
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+}
+
+.icono-texto {
+    font-size: 0.85rem;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.icono-con-texto:hover .hero-icon,
+.icono-con-texto:hover .icono-texto {
+    color: #000;
+    transform: scale(1.05);
+}
+
+.user-icon {
+    margin-top: auto;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+.user-icon .icono-con-texto {
+    padding-left: 1rem;
+}
+
+.profile-container {
+    margin-top: auto; 
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.iconos {
+    flex: 1; 
+}
+
+.profile-container .icono-con-texto {
+    padding-left: 1rem;
+}
+

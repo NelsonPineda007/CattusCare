@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/docpub.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/heroicons/3.0.1/heroicons.min.css" />
+    <link rel="icon" href="/recursos/img/icon/Login.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    <title>CattusCare</title>
+</head>
+<body>
+<nav class="vertical-bar">
+    <div class="logo"></div>
+    <div class="iconos">
+
+<a href="/vistas/publico/index.html" class="icono-con-texto">
+            <svg class="hero-icon" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z"/>
+                <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z"/>
+            </svg>
+            <span class="icono-texto">Inicio</span>
+        </a>
+
+        <a href="/vistas/publico/chat.html" class="icono-con-texto">
+            <svg class="hero-icon" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0 1 12 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 0 1-3.476.383.39.39 0 0 0-.297.17l-2.755 4.133a.75.75 0 0 1-1.248 0l-2.755-4.133a.39.39 0 0 0-.297-.17 48.9 48.9 0 0 1-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97Z" clip-rule="evenodd"/>
+            </svg>
+            <span class="icono-texto">Chat</span>
+        </a>
+
+        <a href="/vistas/publico/doc.html" class="icono-con-texto">
+            <svg class="hero-icon" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z"/>
+            </svg>
+            <span class="icono-texto">Doctores</span>
+        </a>
+
+        <a href="#" class="icono-con-texto">
+            <svg class="hero-icon" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clip-rule="evenodd"/>
+            </svg>
+            <span class="icono-texto">Calendario</span>
+        </a>
+
+        <a href="#" class="icono-con-texto">
+            <svg class="hero-icon" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 0 1 3.75 3.75v1.875C13.5 8.161 14.34 9 15.375 9h1.875A3.75 3.75 0 0 1 21 12.75v3.375C21 17.16 20.16 18 19.125 18h-9.75A1.875 1.875 0 0 1 7.5 16.125V3.375Z"/>
+                <path d="M15 5.25a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 17.25 7.5h-1.875A.375.375 0 0 1 15 7.125V5.25ZM4.875 6H6v10.125A3.375 3.375 0 0 0 9.375 19.5H16.5v1.125c0 1.035-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 0 1 3 20.625V7.875C3 6.839 3.84 6 4.875 6Z"/>
+            </svg>
+            <span class="icono-texto">Recetas</span>
+        </a>
+    </div>
+
+        <div class="flex flex-col w-full items-center">
+            <div class="darkmode-container mb-2">
+            <button id="darkModeToggle"
+                class="flex items-center gap-2 px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300">
+                <i id="darkModeIcon" class="fas fa-moon"></i>
+                <span id="darkModeText">Dark Mode</span>
+            </button>
+            </div>
+        <div class="profile-container">
+            <a href="#" class="icono-con-texto">
+            <svg class="hero-icon" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd"/>
+            </svg>
+            <span class="icono-texto">Perfil</span>
+            </a>
+        </div>
+</nav>
+
+<!-- Navbar derecho (nuevo) -->
+<nav class="right-bar">
+    <div class="favoritos-header">
+        <svg class="hero-icon w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+        </svg>
+        <h2 class="favoritos-title">Tus favoritos</h2>
+    </div>
+    
+    <div class="favoritos-list">
+    </div>
+</nav>
+
+<main class="content-area p-4">
+    <div class="flex flex-col md:flex-row gap-5 items-start md:items-center mb-8">
+        <div class="busca-doc bg-white rounded-xl shadow-sm p-4 md:w-auto">
+            <div class="busca-docp">
+                <h2 class="titulodoc text-lg font-semibold text-gray-800">Busca el doctor de tu preferencia</h2>
+            </div>
+        </div>
+        <div class="buscador-doc bg-white rounded-xl shadow-sm p-3 w-full md:w-64">
+            <div class="buscador-d flex items-center relative">
+                <svg class="search-icon w-5 h-5 text-gray-400 absolute left-3" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd"/>
+                </svg>
+                <input type="text" placeholder="Busca tu doctor por nombre o especialidad" class="buscadorinput pl-10 pr-4 py-2 w-full rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            </div>
+        </div>
+    </div>
+
+    <!-- Tarjetas de doctores alineadas a la izquierda -->
+    <div class="grid grid-cols-1 gap-3 w-full">
+        <!-- Tarjeta 1 -->
+        <div class="bg-white rounded-xl shadow-sm p-3 w-full">
+            <div class="flex gap-2 items-start">
+                <!-- Foto de perfil -->
+                <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden flex-shrink-0">
+                    <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-sm font-semibold truncate">Dr. Nelson Scoot</h3>
+                        <div class="flex">
+                            <span class="text-yellow-400 text-xs">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-xs mb-1">Especialista en cardiología</p>
+                    <div class="flex space-x-1">
+                        <button class="border border-red-500 text-red-500 bg-transparent hover:bg-red-50 px-1.5 py-0.5 rounded text-xs">
+                            + Favoritos
+                        </button>
+                        <button class="border border-blue-500 text-blue-500 bg-transparent hover:bg-blue-50 px-1.5 py-0.5 rounded text-xs">
+                            Perfil
+                        </button>
+                        <button class="border border-green-500 text-green-500 bg-transparent hover:bg-green-50 px-1.5 py-0.5 rounded text-xs">
+                            Mensaje
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="bg-white rounded-xl shadow-sm p-3 w-full">
+            <div class="flex gap-2 items-start">
+                <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden flex-shrink-0">
+                    <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-sm font-semibold truncate">Dra. Laura Fernández</h3>
+                        <div class="flex">
+                            <span class="text-yellow-400 text-xs">★★★★☆</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-xs mb-1">Especialista en dermatología</p>
+                    <div class="flex space-x-1">
+                        <button class="border border-red-500 text-red-500 bg-transparent hover:bg-red-50 px-1.5 py-0.5 rounded text-xs">
+                            + Favoritos
+                        </button>
+                        <button class="border border-blue-500 text-blue-500 bg-transparent hover:bg-blue-50 px-1.5 py-0.5 rounded text-xs">
+                            Perfil
+                        </button>
+                        <button class="border border-green-500 text-green-500 bg-transparent hover:bg-green-50 px-1.5 py-0.5 rounded text-xs">
+                            Mensaje
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="bg-white rounded-xl shadow-sm p-3 w-full">
+            <div class="flex gap-2 items-start">
+                <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden flex-shrink-0">
+                    <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-sm font-semibold truncate">Dr. María Rodríguez</h3>
+                        <div class="flex">
+                            <span class="text-yellow-400 text-xs">★★★★★</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-xs mb-1">Especialista en pediatría</p>
+                    <div class="flex space-x-1">
+                        <button class="border border-red-500 text-red-500 bg-transparent hover:bg-red-50 px-1.5 py-0.5 rounded text-xs">
+                            + Favoritos
+                        </button>
+                        <button class="border border-blue-500 text-blue-500 bg-transparent hover:bg-blue-50 px-1.5 py-0.5 rounded text-xs">
+                            Perfil
+                        </button>
+                        <button class="border border-green-500 text-green-500 bg-transparent hover:bg-green-50 px-1.5 py-0.5 rounded text-xs">
+                            Mensaje
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="bg-white rounded-xl shadow-sm p-3 w-full">
+            <div class="flex gap-2 items-start">
+                <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden flex-shrink-0">
+                    <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-sm font-semibold truncate">Dr. Carlos Espacialista</h3>
+                        <div class="flex">
+                            <span class="text-yellow-400 text-xs">★★★☆☆</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-xs mb-1">Especialista</p>
+                    <div class="flex space-x-1">
+                        <button class="border border-red-500 text-red-500 bg-transparent hover:bg-red-50 px-1.5 py-0.5 rounded text-xs">
+                            + Favoritos
+                        </button>
+                        <button class="border border-blue-500 text-blue-500 bg-transparent hover:bg-blue-50 px-1.5 py-0.5 rounded text-xs">
+                            Perfil
+                        </button>
+                        <button class="border border-green-500 text-green-500 bg-transparent hover:bg-green-50 px-1.5 py-0.5 rounded text-xs">
+                            Mensaje
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    document
+    .getElementById("darkModeToggle")
+    .addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        const icon = document.getElementById("darkModeIcon");
+        const text = document.getElementById("darkModeText");
+        icon.classList.toggle("fa-moon");
+        icon.classList.toggle("fa-sun");
+        text.textContent = document.documentElement.classList.contains("dark")
+        ? "Light Mode"
+        : "Dark Mode";
+    });
+</script>
+
+
+</body>
+</html>
