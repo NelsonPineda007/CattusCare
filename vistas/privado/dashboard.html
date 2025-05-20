@@ -18,50 +18,46 @@
     <div class="min-h-screen flex flex-col">
       <div class="flex flex-1 border-4 border-black">
         <!-- Navbar lateral -->
-        <nav class="flex flex-col border-r-4 border-black p-2 justify-between w-32 items-center text-left">
+        <nav class="flex flex-col border-r-4 border-black p-2 justify-between w-[200px] items-center text-left">
           <div class="flex flex-col items-center space-y-6 w-full">
-            <div class="w-24 h-24 flex items-center justify-center text-lg font-bold">
+            <div class="w-32 h-32 flex items-center justify-center text-lg font-bold">
               <a href="dashboard.html">
                 <img src="../../recursos/img/Login.png" alt="Logo" />
               </a>
             </div>
-            <div class="space-y-6 w-full">
+            <div class="space-y-6 w-full flex flex-col items-center">
               <button onclick="location.href='dashboard.html'" type="button"
-                class="nav-button w-full h-20 flex items-center space-x-3 pl-4 font-semibold text-sm rounded-md">
+                class="nav-button w-full h-20 flex items-center justify-center space-x-3 font-semibold text-sm rounded-md px-6">
                 <i class="fas fa-home text-xl"></i>
                 <span>Inicio</span>
               </button>
               <button onclick="location.href='chat.html'" type="button"
-                class="nav-button w-full h-20 flex items-center space-x-3 pl-4 font-semibold text-sm rounded-md">
+                class="nav-button w-full h-20 flex items-center justify-center space-x-3 font-semibold text-sm rounded-md px-6">
                 <i class="fas fa-comments text-xl"></i>
                 <span>Chat</span>
               </button>
               <button type="button"
-                class="nav-button w-full h-20 flex items-center space-x-3 pl-4 font-semibold text-sm rounded-md">
+                class="nav-button w-full h-20 flex items-center justify-center space-x-3 font-semibold text-sm rounded-md px-6">
                 <i class="fas fa-calendar-alt text-xl"></i>
                 <span>Citas</span>
               </button>
               <button type="button"
-                class="nav-button w-full h-20 flex items-center space-x-3 pl-4 font-semibold text-sm rounded-md">
+                class="nav-button w-full h-20 flex items-center justify-center space-x-3 font-semibold text-sm rounded-md px-6">
                 <i class="fas fa-file-medical text-xl"></i>
                 <span>Receta</span>
               </button>
             </div>
           </div>
-          <div class="flex flex-col w-full items-center">
-            <div class="darkmode-container mb-2">
-              <button id="darkModeToggle"
-                class="flex items-center gap-2 px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300">
-                <i id="darkModeIcon" class="fas fa-moon"></i>
-                <span id="darkModeText">Dark Mode</span>
-              </button>
-            </div>
-            <div class="perfil-container">
-              <div class="no-hover-button w-full cursor-default select-none max-w-[140px] border-0">
-                <i class="fas fa-user text-xl"></i>
-                <span>Perfil</span>
-              </div>
-            </div>
+          <div class="navbar-bottom">
+            <button id="darkModeToggle"
+              class="flex items-center gap-2 px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 text-sm">
+              <i id="darkModeIcon" class="fas fa-moon text-base"></i>
+              <span id="darkModeText" class="select-none">Dark Mode</span>
+            </button>
+            <a href="perfil.html" class="perfil-button">
+              <i class="fas fa-user"></i>
+              <span>Perfil</span>
+            </a>
           </div>
         </nav>
 

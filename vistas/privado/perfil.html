@@ -1,0 +1,276 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/dashboard.css" />
+    <link rel="icon" href="../../recursos/img/Login.png" type="image/png" />
+</head>
+
+<body class="bg-white">
+    <main>
+        <div class="min-h-screen flex flex-col">
+            <div class="flex flex-1 border-4 border-black">
+                <!-- Navbar lateral -->
+                <nav class="flex flex-col border-r-4 border-black p-2 justify-between w-[200px] items-center text-left">
+                    <div class="flex flex-col items-center space-y-6 w-full">
+                        <div class="w-32 h-32 flex items-center justify-center text-lg font-bold">
+                            <a href="dashboard.html">
+                                <img src="../../recursos/img/Login.png" alt="Logo" />
+                            </a>
+                        </div>
+                        <div class="space-y-6 w-full flex flex-col items-center">
+                            <button onclick="location.href='dashboard.html'" type="button"
+                                class="nav-button w-full h-20 flex items-center justify-center space-x-3 font-semibold text-sm rounded-md px-6">
+                                <i class="fas fa-home text-xl"></i>
+                                <span>Inicio</span>
+                            </button>
+                            <button onclick="location.href='chat.html'" type="button"
+                                class="nav-button w-full h-20 flex items-center justify-center space-x-3 font-semibold text-sm rounded-md px-6">
+                                <i class="fas fa-comments text-xl"></i>
+                                <span>Chat</span>
+                            </button>
+                            <button type="button"
+                                class="nav-button w-full h-20 flex items-center justify-center space-x-3 font-semibold text-sm rounded-md px-6">
+                                <i class="fas fa-calendar-alt text-xl"></i>
+                                <span>Citas</span>
+                            </button>
+                            <button type="button"
+                                class="nav-button w-full h-20 flex items-center justify-center space-x-3 font-semibold text-sm rounded-md px-6">
+                                <i class="fas fa-file-medical text-xl"></i>
+                                <span>Receta</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="navbar-bottom">
+                        <button id="darkModeToggle"
+                            class="flex items-center gap-2 px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 text-sm">
+                            <i id="darkModeIcon" class="fas fa-moon text-base"></i>
+                            <span id="darkModeText" class="select-none">Dark Mode</span>
+                        </button>
+                        <a href="perfil.html" class="perfil-button">
+                            <i class="fas fa-user"></i>
+                            <span>Perfil</span>
+                        </a>
+                    </div>
+                </nav>
+
+                <div class="bg-gray-50 flex-1">
+                    <div class="max-w-2xl mx-auto p-6">
+                        <h1 class="text-2xl font-bold text-gray-800 mb-6">Perfil</h1>
+                        <p class="text-gray-600 mb-8">Cambia tu foto de perfil y edita tu información personal.</p>
+
+                        <!-- Sección de foto de perfil -->
+                        <div class="mb-8 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div
+                                    class="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden mr-4">
+                                    <i class="fas fa-user text-gray-400 text-3xl"></i>
+                                </div>
+                                <div>
+                                    <h2 class="font-semibold text-gray-700 mb-1">Cambiar foto</h2>
+                                    <p class="text-sm text-gray-500">JPG o PNG. Tu foto se recortará automáticamente.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-3">
+                                <button
+                                    class="w-40 px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 font-semibold text-sm">
+                                    <i class="fas fa-upload text-base"></i>
+                                    <span>Subir nueva foto</span>
+                                </button>
+                                <button
+                                    class="w-40 px-4 py-2 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 font-semibold text-sm">
+                                    <i class="fas fa-sync-alt text-base"></i>
+                                    <span>Actualizar perfil</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Valoraciones section -->
+                        <section class="mb-8 max-w-md">
+                            <label class="block mb-2 font-bold text-gray-700 text-base">
+                                Valoraciones
+                            </label>
+                            <div class="flex items-center space-x-2 text-yellow-400 text-xl">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-black font-bold text-base">
+                                    4.5
+                                </span>
+                            </div>
+                        </section>
+
+                        <div class="border-t border-gray-200 my-6"></div>
+                        <!-- Campos editables del perfil -->
+                        <div class="space-y-6">
+                            <!-- Campo Estado -->
+                            <div class="group relative">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Estado</label>
+                                <div class="relative">
+                                    <select
+                                        class="appearance-none bg-white border border-gray-300 rounded-md px-3 py-2 w-full pr-8">
+                                        <option value="available">🟢 Disponible</option>
+                                        <option value="busy">🟡 Ocupado/a</option>
+                                        <option value="away">🔴 Ausente</option>
+                                        <option value="vacation">✈️ De vacaciones</option>
+                                    </select>
+                                    <div
+                                        class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Campo Nombre -->
+                            <div class="group relative">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+                                <div class="flex items-center relative">
+                                    <input type="text" value="Cook"
+                                        class="bg-white border border-gray-300 rounded-md px-3 py-2 w-full pr-8"
+                                        readonly />
+                                    <button class="absolute right-2 text-gray-400 hover:text-blue-500 ml-2 edit-btn"
+                                        type="button">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Campo Especialidad -->
+                            <div class="group relative">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Especialidad</label>
+                                <div class="flex items-center relative">
+                                    <input type="text" value="Cardiologo"
+                                        class="bg-white border border-gray-300 rounded-md px-3 py-2 w-full pr-8"
+                                        readonly />
+                                    <button class="absolute right-2 text-gray-400 hover:text-blue-500 ml-2 edit-btn"
+                                        type="button">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Campo Localidad -->
+                            <div class="group relative">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Localidad</label>
+                                <div class="flex items-center relative">
+                                    <input type="text" value="San Salvador"
+                                        class="bg-white border border-gray-300 rounded-md px-3 py-2 w-full pr-8"
+                                        readonly />
+                                    <button class="absolute right-2 text-gray-400 hover:text-blue-500 ml-2 edit-btn"
+                                        type="button">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Campo Email -->
+                            <div class="group relative">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <div class="flex items-center relative">
+                                    <input type="text" value="Travisscott@gmail.com"
+                                        class="bg-white border border-gray-300 rounded-md px-3 py-2 w-full pr-8"
+                                        readonly />
+                                    <button class="absolute right-2 text-gray-400 hover:text-blue-500 ml-2 edit-btn"
+                                        type="button">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Campo Telefono -->
+                            <div class="group relative">
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Telefono</label>
+                                <div class="flex items-center relative">
+                                    <input type="text" value="7543-2354"
+                                        class="bg-white border border-gray-300 rounded-md px-3 py-2 w-full pr-8"
+                                        readonly />
+                                    <button class="absolute right-2 text-gray-400 hover:text-blue-500 ml-2 edit-btn"
+                                        type="button">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-200 my-8"></div>
+                </div>
+            </div>
+            <footer class="bg-gray-100 border-t border-black py-6 font-mono">
+                <div class="container mx-auto px-4">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Columna 1: Logo -->
+                        <div class="flex flex-col items-center md:items-start">
+                            <a href="dashboard.html" class="mb-4">
+                                <img src="../../recursos/img/Login.png" alt="Logo" class="h-16" />
+                            </a>
+                            <p class="text-gray-700 text-sm">
+                                © 2024 Tu Empresa. Todos los derechos reservados.
+                            </p>
+                        </div>
+
+                        <!-- Columna 2: Enlaces rápidos -->
+                        <div class="flex flex-col items-center md:items-start">
+                            <h3 class="text-lg font-bold mb-4">Enlaces rápidos</h3>
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="#" class="text-gray-700 hover:text-black transition">Inicio</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-gray-700 hover:text-black transition">Chat</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-gray-700 hover:text-black transition">Citas</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-gray-700 hover:text-black transition">Receta</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Columna 3: Redes sociales -->
+                        <div class="flex flex-col items-center md:items-start">
+                            <h3 class="text-lg font-bold mb-4">Síguenos</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-gray-700 hover:text-blue-500 transition"><i
+                                        class="fab fa-facebook text-2xl"></i></a>
+                                <a href="#" class="text-gray-700 hover:text-pink-500 transition"><i
+                                        class="fab fa-instagram text-2xl"></i></a>
+                                <a href="#" class="text-gray-700 hover:text-blue-400 transition"><i
+                                        class="fab fa-twitter text-2xl"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Copyright -->
+                    <div class="border-t border-gray-300 mt-6 pt-4 text-center text-sm text-gray-600">
+                        <p>© 2024 CattusCare. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </footer>
+
+            <script>
+                document
+                    .getElementById("darkModeToggle")
+                    .addEventListener("click", () => {
+                        document.documentElement.classList.toggle("dark");
+                        const icon = document.getElementById("darkModeIcon");
+                        const text = document.getElementById("darkModeText");
+                        icon.classList.toggle("fa-moon");
+                        icon.classList.toggle("fa-sun");
+                        text.textContent = document.documentElement.classList.contains("dark")
+                            ? "Light Mode"
+                            : "Dark Mode";
+                    });
+            </script>
+</body>
+
+</html>
