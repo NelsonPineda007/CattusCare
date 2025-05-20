@@ -3,15 +3,11 @@ body {
 }
 
 /* Remove border from buttons */
-/*HOVER DE LOS BOTONES DEL NAVBAR*/
+/*HOVER BOTONES*/
 .nav-button {
-    border: none;
     position: relative;
-    overflow: visible;
-    padding-right: 0;
 }
 
-/* Hover effect: small red highlight exactly at right edge and top border, shifted further right with smooth rounded edges */
 .nav-button::after {
     content: "";
     position: absolute;
@@ -19,58 +15,87 @@ body {
     /* align with navbar top border */
     right: -10px;
     /* shifted further right */
-    width: 4%;
     height: calc(100% + 12px);
     /* extend height to cover top border with padding */
     background-color: rgba(220, 38, 38, 1);
     /* Tailwind red-600 */
     opacity: 0;
-    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-        width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
     z-index: 10;
     box-shadow: 0 0 12px rgba(220, 38, 38, 0.6);
     width: 0;
+    border-radius: 8px 8px 8px 8px;
+    /* slightly smaller radius */
 }
 
 .nav-button:hover::after {
     opacity: 1;
-    width: 4%;
+    width: 2.5%;
 }
 
-/* No hover for perfil and dark mode buttons */
-.no-hover-button {
-    border: 4px solid black;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-weight: 600;
-    font-size: 0.875rem;
-    color: inherit;
-    cursor: default;
+/* Formal profile button */
+.perfil-button {
+    @apply w-full max-w-[180px] flex items-center justify-center gap-3 px-4 py-2 border border-gray-700 rounded-md text-gray-700 font-semibold hover:bg-gray-100 transition-colors duration-300;
+    cursor: pointer;
     user-select: none;
-    background: transparent;
-    margin-top: 0;
-    margin-bottom: 0;
-    justify-content: center;
+    text-decoration: none;
 }
 
-.darkmode-container {
-    margin-top: 3rem;
-    margin-bottom: 0.5rem;
-    width: 100%;
+.perfil-button i {
+    font-size: 1.25rem;
+}
+
+.perfil-button:hover {
+    background-color: #f3f4f6;
+    /* Tailwind gray-100 */
+    color: #1f2937;
+    /* Tailwind gray-800 */
+    border-color: #1f2937;
+}
+
+/* Adjust spacing between dark mode and profile */
+.navbar-bottom {
     display: flex;
-    justify-content: center;
-}
-
-.perfil-container {
-    margin-bottom: 2rem;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    display: flex;
-    justify-content: center;
-}
+    gap: 1.5rem;
+    /* increased space between buttons */
+    padding-bottom: 0.5rem;
 
-/*HOVER DE LOS BOTONES DEL NAVBAR (AQUI TERMINA)*/
+    /*HOVER DE LOS BOTONES DEL NAVBAR (AQUI TERMINA)*/
+    /* No hover for perfil and dark mode buttons */
+    .no-hover-button {
+        border: 4px solid black;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-weight: 600;
+        font-size: 0.875rem;
+        color: inherit;
+        cursor: default;
+        user-select: none;
+        background: transparent;
+        margin-top: 0;
+        margin-bottom: 0;
+        justify-content: center;
+    }
+
+    .darkmode-container {
+        margin-top: 3rem;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .perfil-container {
+        margin-bottom: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
