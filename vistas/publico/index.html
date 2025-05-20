@@ -19,7 +19,7 @@
     <div class="logo"></div>
     <div class="iconos">
 
-        <a href="#" class="icono-con-texto">
+<a href="#" class="icono-con-texto">
             <svg class="hero-icon" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z"/>
                 <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z"/>
@@ -34,7 +34,7 @@
             <span class="icono-texto">Chat</span>
         </a>
 
-        <a href="#" class="icono-con-texto">
+        <a href="/vistas/publico/doc.html" class="icono-con-texto">
             <svg class="hero-icon" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z"/>
             </svg>
@@ -65,14 +65,14 @@
                 <span id="darkModeText">Dark Mode</span>
             </button>
             </div>
-    <div class="profile-container">
-        <a href="#" class="icono-con-texto">
+        <div class="profile-container">
+            <a href="#" class="icono-con-texto">
             <svg class="hero-icon" fill="currentColor" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd"/>
             </svg>
             <span class="icono-texto">Perfil</span>
-        </a>
-    </div>
+            </a>
+        </div>
 </nav>
 
 <main class="content-area">
@@ -322,59 +322,64 @@
         <a href="#"><button class="btn" type="submit">Ver más</button></a>
     </div>
 </div>
+</main>
 
-<footer class="bg-gray-100 border-t border-black py-6 font-mono">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Columna 1: Logo -->
-        <div class="flex flex-col items-center md:items-start">
-          <a href="dashboard.html" class="mb-4">
-            <img src="../../recursos/img/Login.png" alt="Logo" class="h-16" />
-          </a>
-          <p class="text-gray-700 text-sm">
-            © 2024 Tu Empresa. Todos los derechos reservados.
-          </p>
+<footer class="bg-gray-100 border-t border-black py-12 font-mono">
+    <div class="container mx-auto px-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Columna 1: Logo -->
+            <div class="flex flex-col items-center md:items-start">
+                <a href="dashboard.html" class="mb-4">
+                    <img src="../../recursos/img/Login.png" alt="Logo" class="h-16" />
+                </a>
+                <p class="text-gray-700 text-sm">
+                    © 2024 Tu Empresa. Todos los derechos reservados.
+                </p>
+            </div>
+
+            <!-- Columna 2: Enlaces rápidos -->
+            <div class="flex flex-col items-center md:items-start">
+                <h3 class="text-lg font-bold mb-4">Enlaces rápidos</h3>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#" class="text-gray-700 hover:text-black transition">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-700 hover:text-black transition">Chat</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-700 hover:text-black transition">Citas</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-gray-700 hover:text-black transition">Receta</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Redes sociales -->
+            <div class="flex flex-col items-center md:items-start">
+                <h3 class="text-lg font-bold mb-4">Síguenos</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-700 hover:text-blue-500 transition">
+                        <i class="fab fa-facebook text-3xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-pink-500 transition">
+                        <i class="fab fa-instagram text-3xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-blue-400 transition">
+                        <i class="fab fa-twitter text-3xl"></i>
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <!-- Columna 2: Enlaces rápidos -->
-        <div class="flex flex-col items-center md:items-start">
-          <h3 class="text-lg font-bold mb-4">Enlaces rápidos</h3>
-          <ul class="space-y-2">
-            <li>
-              <a href="#" class="text-gray-700 hover:text-black transition">Inicio</a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-700 hover:text-black transition">Chat</a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-700 hover:text-black transition">Citas</a>
-            </li>
-            <li>
-              <a href="#" class="text-gray-700 hover:text-black transition">Receta</a>
-            </li>
-          </ul>
+        <!-- Copyright -->
+        <div class="border-t border-gray-300 mt-6 pt-4 text-center text-sm text-gray-600">
+            <p>© 2024 CattusCare. Todos los derechos reservados.</p>
         </div>
-
-        <!-- Columna 3: Redes sociales -->
-        <div class="flex flex-col items-center md:items-start">
-          <h3 class="text-lg font-bold mb-4">Síguenos</h3>
-          <div class="flex space-x-4">
-            <a href="#" class="text-gray-700 hover:text-blue-500 transition"><i
-                class="fab fa-facebook text-2xl"></i></a>
-            <a href="#" class="text-gray-700 hover:text-pink-500 transition"><i
-                class="fab fa-instagram text-2xl"></i></a>
-            <a href="#" class="text-gray-700 hover:text-blue-400 transition"><i class="fab fa-twitter text-2xl"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Copyright -->
-      <div class="border-t border-gray-300 mt-6 pt-4 text-center text-sm text-gray-600">
-        <p>© 2024 CattusCare. Todos los derechos reservados.</p>
-      </div>
     </div>
-  </footer>
-    
+</footer>
+
 <script>
     document
     .getElementById("darkModeToggle")
@@ -389,9 +394,7 @@
         : "Dark Mode";
     });
 </script>
-</body>
 
-</main>
 
 </body>
 </html>

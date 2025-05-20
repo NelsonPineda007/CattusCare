@@ -3,6 +3,8 @@ body {
     font-family: "Martian Mono", monospace;
     display: flex;
     min-height: 100vh;
+    height: 100%;
+    flex-direction: column;
 }
 
 .vertical-bar {
@@ -21,11 +23,9 @@ body {
     z-index: 10;
 }
 
-
-
 .content-area {
+    margin-left: 207px;
     flex: 1;
-    margin-left: 207px; 
     min-height: 100vh;
     background-color: #CBD5E1;
     padding: 2rem; 
@@ -42,14 +42,12 @@ body {
 }
 
 .darkmode-container {
-      margin-top: 3rem;
-      margin-bottom: 0.5rem;
-      width: 100%;
-      display: flex;
-      justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     }
-
-    
 
 .iconos {
     display: flex;
@@ -92,16 +90,6 @@ body {
     transform: scale(1.05);
 }
 
-.user-icon {
-    margin-top: auto;
-    width: 100%;
-    padding-bottom: 1rem;
-}
-
-.user-icon .icono-con-texto {
-    padding-left: 1rem;
-}
-
 .profile-container {
     margin-top: auto; 
     width: 100%;
@@ -110,10 +98,6 @@ body {
 
 .iconos {
     flex: 1; 
-}
-
-.profile-container .icono-con-texto {
-    padding-left: 1rem;
 }
 
 .carruselcontenedor {
@@ -151,33 +135,6 @@ body {
 
 .carrusel-slide:hover img {
     transform: scale(1.03);
-}
-
-.carrusel-dots {
-    position: absolute;
-    bottom: 15px;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    z-index: 10;
-}
-
-.dot {
-    display: block;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.dot:hover, 
-.dot:target {
-    background: white;
-    transform: scale(1.2);
 }
 
 @keyframes slide {
@@ -304,13 +261,6 @@ body {
     display: flex;
     color: #FFD700;
 }
-
-.estrellas svg {
-    width: 18px;
-    height: 18px;
-    margin-right: 2px;
-}
-
 
 .cartas-abajo-contenedor {
     display: grid;
