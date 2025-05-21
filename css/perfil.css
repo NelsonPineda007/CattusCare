@@ -2,15 +2,16 @@ body {
     font-family: 'Martian Mono', monospace;
 }
 
-/* Nav buttons styling */
+
+/*NAVBAR HOVER BOTON*/
 .nav-button {
     border: none;
     position: relative;
     overflow: visible;
     padding-right: 0;
+    color: #000000;
 }
 
-/* Hover effect for nav buttons */
 .nav-button::after {
     content: "";
     position: absolute;
@@ -18,7 +19,6 @@ body {
     right: -10px;
     height: calc(100% + 12px);
     background-color: rgba(220, 38, 38, 1);
-    /* Tailwind red-600 */
     opacity: 0;
     transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
         width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -34,7 +34,10 @@ body {
     width: 2.5%;
 }
 
-/* Profile button styling */
+.nav-button:hover {
+    color: #dc2626;
+}
+
 .perfil-button {
     width: 100%;
     max-width: 180px;
@@ -55,7 +58,10 @@ body {
     font-size: 1.25rem;
 }
 
-/* Navbar bottom section */
+.perfil-button:hover {
+    color: #dc2626;
+}
+
 .navbar-bottom {
     display: flex;
     flex-direction: column;
@@ -64,6 +70,8 @@ body {
     gap: 1.5rem;
     padding-bottom: 0.5rem;
 }
+
+/*NAVBAR HOVER BOTON*/
 
 /* Non-interactive buttons */
 .no-hover-button {

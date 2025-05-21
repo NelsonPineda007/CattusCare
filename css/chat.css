@@ -3,30 +3,31 @@ body {
 }
 
 /* Remove border from buttons */
-/*HOVER BOTONES*/
+
+/*NAVBAR HOVER BOTON*/
 .nav-button {
+    border: none;
     position: relative;
+    overflow: visible;
+    padding-right: 0;
+    color: #000000;
 }
 
 .nav-button::after {
     content: "";
     position: absolute;
     top: -6px;
-    /* align with navbar top border */
     right: -10px;
-    /* shifted further right */
     height: calc(100% + 12px);
-    /* extend height to cover top border with padding */
     background-color: rgba(220, 38, 38, 1);
-    /* Tailwind red-600 */
     opacity: 0;
-    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
     z-index: 10;
     box-shadow: 0 0 12px rgba(220, 38, 38, 0.6);
     width: 0;
-    border-radius: 8px 8px 8px 8px;
-    /* slightly smaller radius */
+    border-radius: 8px;
 }
 
 .nav-button:hover::after {
@@ -34,13 +35,24 @@ body {
     width: 2.5%;
 }
 
-/* Formal profile button */
+.nav-button:hover {
+    color: #dc2626;
+}
+
 .perfil-button {
-    /*@apply w-full max-w-[180px] flex items-center justify-center gap-3 px-4 py-2 border border-gray-700 rounded-md text-gray-700 font-semibold hover:bg-gray-100 transition-colors duration-300;
-    */
+    width: 100%;
+    max-width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    color: #374151;
+    font-weight: 600;
     cursor: pointer;
     user-select: none;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .perfil-button i {
@@ -48,23 +60,20 @@ body {
 }
 
 .perfil-button:hover {
-    background-color: #f3f4f6;
-    /* Tailwind gray-100 */
-    color: #1f2937;
-    /* Tailwind gray-800 */
-    border-color: #1f2937;
+    color: #dc2626;
 }
 
-/* Adjust spacing between dark mode and profile */
 .navbar-bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     gap: 1.5rem;
-    /* increased space between buttons */
     padding-bottom: 0.5rem;
 }
+
+/*NAVBAR HOVER BOTON*/
+
 
 /*HOVER DE LOS BOTONES DEL NAVBAR (AQUI TERMINA)*/
 /* No hover for perfil and dark mode buttons */
