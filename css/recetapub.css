@@ -1,0 +1,276 @@
+body {
+  margin: 0;
+  font-family: "Martian Mono", monospace;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #FAFAFA;
+}
+
+.vertical-bar {
+  background-color: white;
+  width: 206px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5rem 0.5rem;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.logo {
+  width: 100%;
+  height: 150px;
+  background-image: url('/recursos/img/Login.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto 2rem;
+}
+
+.iconos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex: 1;
+}
+
+.icono-con-texto {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+  gap: 0.8rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  transition: all 0.3s;
+}
+
+.hero-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: #333;
+  transition: all 0.3s;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+
+.icono-texto {
+  font-size: 0.85rem;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.icono-con-texto:hover .hero-icon,
+.icono-con-texto:hover .icono-texto {
+  color: #000;
+  transform: scale(1.05);
+}
+
+.profile-container {
+  margin-top: auto;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.comienzo {
+  border-radius: 12px;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.contenido {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-icon {
+  color: #888;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.search-box {
+  padding: 10px 15px;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.search-box:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Estilos para la tabla (NUEVOS ESTILOS) */
+/* CONTENEDOR PRINCIPAL */
+.content-area {
+  margin-left: 250px;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* HEADER CON BUSCADOR */
+.recetas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.recetas-header h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0;
+}
+
+.search-box {
+  position: relative;
+  width: 300px;
+}
+
+.search-box i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 15px 10px 40px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #3a86ff;
+  box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
+}
+
+/* TARJETAS DE RECETAS */
+.recetas-container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.receta-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #eee;
+}
+
+.receta-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.receta-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.receta-num {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #3a86ff;
+  background: #f0f7ff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.receta-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+}
+
+.doctor, .fecha {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.fecha {
+  color: #888;
+}
+
+/* BOTONES DE ACCIÓN */
+.receta-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-action {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.btn-action svg {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-action.view {
+  color: #3a86ff;
+}
+
+.btn-action.delete {
+  color: #ff4757;
+}
+
+.btn-action:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.btn-action:active {
+  transform: scale(0.95);
+}
+
