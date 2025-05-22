@@ -57,16 +57,35 @@
         </a>
     </div>
 
-        <div class="flex flex-col w-full items-center">
-            <div class="darkmode-container mb-2">
-            <button id="darkModeToggle"
-                class="flex items-center gap-2 px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300">
-                <i id="darkModeIcon" class="fas fa-moon"></i>
-                <span id="darkModeText">Dark Mode</span>
-            </button>
-            </div>
+<div class="flex flex-col w-full items-center gap-1"> <!-- Reduje el gap general -->
+    <!-- Premium (ahora con estilo idéntico a Dark Mode) -->
+
+<div class="w-full px-4 pt-3">
+    <a href="/vistas/publico/suscripcion.html" id="premiumToggle" class="flex items-center gap-2 w-full px-4 py-2 rounded-full transition-all transform hover:scale-[1.02] active:scale-95 shadow-md hover:shadow-lg">
+        <!-- Fondo con gradiente dorado brillante -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#FFD700] via-[#FFEC8B] to-[#FFD700] rounded-full opacity-90 hover:opacity-100 transition-opacity"></div>
+
+                <div class="relative z-10 flex items-center gap-2 w-full justify-center">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M1 4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4Zm12 4a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM4 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm13-1a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM1.75 14.5a.75.75 0 0 0 0 1.5c4.417 0 8.693.603 12.749 1.73 1.111.309 2.251-.512 2.251-1.696v-.784a.75.75 0 0 0-1.5 0v.784a.272.272 0 0 1-.35.25A49.043 49.043 0 0 0 1.75 14.5Z" clip-rule="evenodd"/>
+            </svg> 
+            <span id="premiumText" class="font-medium text-gray-800 drop-shadow-sm">Premium</span>
+        </div>
+    </a>
+</div>
+
+    <!-- Dark Mode (conserva su estilo) -->
+    <div class="w-full px-4 pt-3"">
+        <button id="darkModeToggle" class="flex items-center gap-2 w-full px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 transition-colors">
+            <i id="darkModeIcon" class="fas fa-moon"></i>
+            <span id="darkModeText">Dark Mode</span>
+        </button>
+    </div>
+
+
+    <!-- Perfil (estilo original sin fondo) -->
         <div class="profile-container">
-            <a href="#" class="icono-con-texto">
+            <a href="/vistas/publico/perfilpub.html" class="icono-con-texto">
             <svg class="hero-icon" fill="currentColor" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd"/>
             </svg>
@@ -80,25 +99,50 @@
         <p class="text-gray-600 mb-8">Cambia tu foto de perfil y edita tu información personal.</p>
         
         <!-- Sección de foto de perfil -->
-      <div class="mb-8 flex justify-between items-center">
-            <div class="flex items-center">
-                <div class="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden mr-4">
-                    <i class="fas fa-user text-gray-400 text-3xl"></i>
-                </div>
-                <div>
-                    <h2 class="font-semibold text-gray-700 mb-1">Cambiar foto</h2>
-                    <p class="text-sm text-gray-500">JPG o PNG. Tu foto se recortará automáticamente.</p>
-                </div>
-            </div>
-            <div class="flex space-x-4">
-                <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
-                    Subir nueva foto
-                </button>
-                <button class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
-                    Actualizar perfil
-                </button>
-            </div>
-        </div>
+                        <div class="mb-8 flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div
+                                    class="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden mr-4">
+                                    <i class="fas fa-user text-gray-400 text-3xl"></i>
+                                </div>
+                                <div>
+                                    <h2 class="font-semibold text-gray-700 mb-1">Cambiar foto</h2>
+                                    <p class="text-sm text-gray-500">JPG o PNG. Tu foto se recortará automáticamente.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col space-y-3">
+                                <button
+                                    class="w-40 px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 font-semibold text-sm">
+                                    <i class="fas fa-upload text-base"></i>
+                                    <span>Subir nueva foto</span>
+                                </button>
+                                <button
+                                    class="w-40 px-4 py-2 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 font-semibold text-sm">
+                                    <i class="fas fa-sync-alt text-base"></i>
+                                    <span>Actualizar perfil</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Valoraciones section -->
+                        <section class="mb-8 max-w-md">
+                            <label class="block mb-2 font-bold text-gray-700 text-base">
+                                Valoraciones
+                            </label>
+                            <div class="flex items-center space-x-2 text-yellow-400 text-xl">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-black font-bold text-base">
+                                    4.5
+                                </span>
+                            </div>
+                        </section>
+
+                        <div class="border-t border-gray-200 my-6"></div>
 
         <div class="border-t border-gray-200 my-6"></div>
         <!-- Campos editables del perfil -->

@@ -3,6 +3,8 @@ body {
     font-family: "Martian Mono", monospace;
     display: flex;
     min-height: 100vh;
+    height: 100%;
+    flex-direction: column;
 }
 
 .vertical-bar {
@@ -19,6 +21,14 @@ body {
     padding: 0.5rem 0.5rem;
     gap: 0.5rem;
     z-index: 10;
+}
+
+.content-area {
+    margin-left: 207px;
+    flex: 1;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 2rem; 
 }
 
 .logo {
@@ -38,8 +48,6 @@ body {
     display: flex;
     justify-content: center;
     }
-
-    
 
 .iconos {
     display: flex;
@@ -82,29 +90,18 @@ body {
     transform: scale(1.05);
 }
 
-.user-icon {
-    margin-top: auto;
-    width: 100%;
-    padding-bottom: 1rem;
-}
-
-.user-icon .icono-con-texto {
-    padding-left: 1rem;
-}
-
 .profile-container {
     margin-top: auto; 
     width: 100%;
     padding: 1rem 0;
 }
 
+
 .iconos {
     flex: 1; 
 }
 
-.profile-container .icono-con-texto {
-    padding-left: 1rem;
-}
+
 
   #premiumToggle {
         position: relative;
@@ -135,3 +132,9 @@ body {
         0% { transform: translateX(-100%) rotate(30deg); }
         100% { transform: translateX(100%) rotate(30deg); }
     }
+
+
+
+
+    
+
