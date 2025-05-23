@@ -134,7 +134,208 @@ body {
     }
 
 
+.premium-h1{
+    font-size: x-large;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+
+/* Estilos existentes que se mantienen */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Reducido de 30px a 20px */
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 70px; /* Añadido espacio después de la línea */
+}
+
+/* Estilo de carta premium */
+.free-card {
+    background-color: white;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    border: 0px solid #000000;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin: 0;
+}
+
+.premium-card {
+    background-color: white;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    border: 3px solid #FFC300;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin: 0;
+}
+
+.premium-card2 {
+    background-color: white;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    border: 2px solid #F5DEB3;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin: 0;
+}
 
 
-    
+
+
+/* Resto de estilos (se mantienen igual) */
+.premium-header {
+    position: relative;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.premium-badge {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    background-color: #ffd700;
+    color: #8a6d3b;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.premium-badge2 {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    background-color: #838382;
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.price-section {
+    margin-bottom: 20px;
+}
+
+.plan {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.price-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.feature-item .icon {
+    margin-right: 10px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.feature-item .check-icon {
+    color: #28a745;
+}
+
+.feature-item .warning-icon {
+    color: #ffc107;
+}
+
+.feature-item .x-icon {
+    color: #dc3545;
+}
+
+.subscribe-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #8b8b8b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+}
+
+.subscribe-button:hover {
+    background-color: #000000;
+}
+
+/* Nuevos estilos para la lista de características */
+/* Estilos para la lista de características */
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.feature-item .icon {
+    margin-right: 10px;
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+}
+
+/* Colores para los diferentes iconos */
+.feature-item .check-icon {
+    color: #28a745; /* Verde para checks */
+}
+
+.feature-item .warning-icon {
+    color: #ffc107; /* Amarillo para advertencias */
+}
+
+.feature-item .x-icon {
+    color: #dc3545; /* Rojo para X */
+}
 
