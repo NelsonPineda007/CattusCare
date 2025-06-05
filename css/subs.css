@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     margin: 0;
     font-family: "Martian Mono", monospace;
@@ -47,7 +48,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    }
+}
 
 .iconos {
     display: flex;
@@ -96,134 +97,123 @@ body {
     padding: 1rem 0;
 }
 
-
 .iconos {
     flex: 1; 
 }
 
+#premiumToggle {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    background: none;
+}
 
+#premiumToggle::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(30deg);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
 
-  #premiumToggle {
-        position: relative;
-        overflow: hidden;
-        border: none;
-        background: none;
-    }
-    
-    #premiumToggle::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
-        transform: rotate(30deg);
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-    
-    #premiumToggle:hover::before {
-        opacity: 0.6;
-        animation: shine 2s infinite;
-    }
-    
-    @keyframes shine {
-        0% { transform: translateX(-100%) rotate(30deg); }
-        100% { transform: translateX(100%) rotate(30deg); }
-    }
+#premiumToggle:hover::before {
+    opacity: 0.6;
+    animation: shine 2s infinite;
+}
 
+@keyframes shine {
+    0% { transform: translateX(-100%) rotate(30deg); }
+    100% { transform: translateX(100%) rotate(30deg); }
+}
 
-.premium-h1{
+/* Subscription Page Styles */
+.premium {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.premium-arriba {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.premium-h1 {
     font-size: x-large;
     font-weight: 500;
     padding-bottom: 30px;
 }
 
-/* Estilos existentes que se mantienen */
+.linea {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #333, transparent);
+    margin: 1rem auto;
+    width: 80%;
+}
+
+/* Cards Layout - 2 arriba y 2 abajo */
 .cards-container {
     display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.cards-row {
+    display: flex;
     justify-content: center;
-    gap: 30px; /* Reducido de 30px a 20px */
+    gap: 30px;
     width: 100%;
-    flex-wrap: wrap;
-    margin-top: 70px; /* Añadido espacio después de la línea */
 }
 
-/* Estilo de carta premium */
-.free-card {
-    background-color: white;
-    border-radius: 12px;
-    width: 100%;
-    max-width: 450px;
-    border: 0px solid #000000;
-    padding: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin: 0;
-}
-
-.premium-card {
-    background-color: white;
-    border-radius: 12px;
-    width: 100%;
-    max-width: 450px;
-    border: 3px solid #FFC300;
-    padding: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin: 0;
-}
-
+/* Card Styling - Tamaño original */
+.free-card,
+.premium-card,
 .premium-card2 {
     background-color: white;
     border-radius: 12px;
-    width: 100%;
-    max-width: 450px;
-    border: 2px solid #F5DEB3;
+    width: 450px; /* Tamaño original */
     padding: 30px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin: 0;
-}
-
-
-
-
-/* Resto de estilos (se mantienen igual) */
-.premium-header {
     position: relative;
-    padding-bottom: 30px;
-    margin-bottom: 20px;
 }
 
-.premium-badge {
+.free-card {
+    border: 1px solid #e0e0e0;
+}
+
+.premium-card {
+    border: 3px solid #FFC300;
+    background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%);
+}
+
+/* Efecto RECOMENDADO diagonal */
+.premium-card::before {
+    content: "RECOMENDADO";
     position: absolute;
-    top: -10px;
-    left: 0;
-    background-color: #ffd700;
+    top: 20px;
+    right: -30px;
+    background: #FFD700;
     color: #8a6d3b;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 14px;
+    padding: 5px 30px;
+    transform: rotate(45deg);
+    font-size: 12px;
     font-weight: bold;
-    display: flex;
-    align-items: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1;
 }
 
-.premium-badge2 {
-    position: absolute;
-    top: -10px;
-    left: 0;
-    background-color: #838382;
-    color: #ffffff;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.premium-card2 {
+    border: 2px solid #F5DEB3;
 }
 
+/* Price Section Styling */
 .price-section {
     margin-bottom: 20px;
 }
@@ -250,6 +240,7 @@ body {
     line-height: 1.5;
 }
 
+/* Features List */
 .features-list {
     list-style: none;
     padding: 0;
@@ -283,6 +274,7 @@ body {
     color: #dc3545;
 }
 
+/* Button Styling */
 .subscribe-button {
     display: block;
     width: 100%;
@@ -302,40 +294,168 @@ body {
     background-color: #000000;
 }
 
-/* Nuevos estilos para la lista de características */
-/* Estilos para la lista de características */
-.features-list {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
+/* Wompi Button Styling */
+.wompi_button_widget {
+    margin-top: 1rem;
 }
 
-.feature-item {
+.wompi_button_widget a {
+    display: block;
+    background: linear-gradient(to right, #00aaff, #0077cc) !important;
+    color: white !important;
+    padding: 1rem !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.wompi_button_widget a:hover {
+    background: linear-gradient(to right, #0095e6, #0066aa) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+}
+
+/* Premium Badge Styling */
+.premium-badge {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    background: linear-gradient(to right, #FFD700, #FFC300);
+    color: #8a6d3b;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.premium-badge2 {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    background: linear-gradient(to right, #a0a0a0, #808080);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
     font-size: 14px;
-    color: #333;
-    line-height: 1.5;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.feature-item .icon {
-    margin-right: 10px;
-    display: inline-flex;
-    width: 20px;
-    height: 20px;
+/* Footer Styles */
+footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #000;
+    padding: 3rem 0;
+    font-family: "Martian Mono", monospace;
 }
 
-/* Colores para los diferentes iconos */
-.feature-item .check-icon {
-    color: #28a745; /* Verde para checks */
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-.feature-item .warning-icon {
-    color: #ffc107; /* Amarillo para advertencias */
+footer .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 
-.feature-item .x-icon {
-    color: #dc3545; /* Rojo para X */
+footer .flex {
+    display: flex;
 }
 
+footer .flex-col {
+    flex-direction: column;
+}
+
+footer .items-center {
+    align-items: center;
+}
+
+footer .items-start {
+    align-items: flex-start;
+}
+
+footer .space-y-2 > * + * {
+    margin-top: 0.5rem;
+}
+
+footer .space-x-4 > * + * {
+    margin-left: 1rem;
+}
+
+footer .text-gray-700 {
+    color: #4a5568;
+}
+
+footer .hover\:text-black:hover {
+    color: #000;
+}
+
+footer .text-3xl {
+    font-size: 1.875rem;
+}
+
+footer .text-lg {
+    font-size: 1.125rem;
+}
+
+footer .font-bold {
+    font-weight: 700;
+}
+
+footer .mb-4 {
+    margin-bottom: 1rem;
+}
+
+footer .text-sm {
+    font-size: 0.875rem;
+}
+
+footer .border-t {
+    border-top-width: 1px;
+}
+
+footer .border-gray-300 {
+    border-color: #e2e8f0;
+}
+
+footer .mt-6 {
+    margin-top: 1.5rem;
+}
+
+footer .pt-4 {
+    padding-top: 1rem;
+}
+
+footer .text-center {
+    text-align: center;
+}
+
+footer .transition {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+
+
+
+.check-icon-green {
+  width: 24px;
+  height: 24px;
+  stroke: #28a745; /* Verde éxito de Bootstrap */
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}

@@ -158,69 +158,240 @@
 </div>
     </div>
 </nav>
-
-    <div class="main-content">
-
+<div class="main-content bg-blue-50 p-4 rounded-lg shadow-md h-[calc(100vh-1px)] w-[calc(100%-560px)] absolute left-[208px] overflow-hidden">
+    <!-- Encabezado del calendario con navegación por meses -->
+    <div class="calendar-header flex justify-between items-center mb-4">
+        <button id="prevMonth" class="p-2 rounded-full hover:bg-blue-100 transition">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <h2 id="currentMonthYear" class="text-xl font-bold text-blue-800">Mayo 2025</h2>
+        
+        <button id="nextMonth" class="p-2 rounded-full hover:bg-blue-100 transition">
+            <i class="fas fa-chevron-right"></i>
+        </button>
     </div>
+    
+    <!-- Días de la semana -->
+    <div class="grid grid-cols-7 gap-1 mb-1 text-sm">
+        <div class="text-center font-medium text-blue-600 p-1">Dom</div>
+        <div class="text-center font-medium text-blue-600 p-1">Lun</div>
+        <div class="text-center font-medium text-blue-600 p-1">Mar</div>
+        <div class="text-center font-medium text-blue-600 p-1">Mié</div>
+        <div class="text-center font-medium text-blue-600 p-1">Jue</div>
+        <div class="text-center font-medium text-blue-600 p-1">Vie</div>
+        <div class="text-center font-medium text-blue-600 p-1">Sáb</div>
+    </div>
+    
+    <!-- Cuadrícula del calendario -->
+    <div id="calendarGrid" class="grid grid-cols-7 gap-1 h-[calc(100%-180px)] overflow-y-auto">
+        <!-- Los días se generarán con JavaScript -->
+    </div>
+    
+    <!-- Sección de notas -->
+    <div class="notes-section mt-2 p-3 bg-white rounded-lg shadow absolute bottom-4 left-4 right-4">
+        <h3 class="text-lg font-semibold mb-2 text-blue-800">Notas <span id="selectedDateDisplay">(Selecciona un día)</span></h3>
+        <textarea id="dayNotes" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm" rows="2" placeholder="Añade notas para este día..."></textarea>
+        <button id="saveNote" class="mt-2 bg-blue-600 text-white px-3 py-1 rounded-lg hover:bg-blue-700 transition text-sm">Guardar Nota</button>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Variables de estado
+    let currentDate = new Date(2025, 4, 1); // Mayo 2025 (los meses van de 0 a 11)
+    let selectedDate = null;
+    let notes = {};
+    
+    // Elementos del DOM
+    const calendarGrid = document.getElementById('calendarGrid');
+    const currentMonthYear = document.getElementById('currentMonthYear');
+    const prevMonthBtn = document.getElementById('prevMonth');
+    const nextMonthBtn = document.getElementById('nextMonth');
+    const selectedDateDisplay = document.getElementById('selectedDateDisplay');
+    const dayNotes = document.getElementById('dayNotes');
+    const saveNoteBtn = document.getElementById('saveNote');
+    
+    // Cargar notas desde localStorage si existen
+    if (localStorage.getItem('calendarNotes')) {
+        notes = JSON.parse(localStorage.getItem('calendarNotes'));
+    }
+    
+    // Función para renderizar el calendario
+    function renderCalendar() {
+        // Limpiar el calendario
+        calendarGrid.innerHTML = '';
+        
+        // Establecer el título del mes y año
+        const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", 
+                           "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        currentMonthYear.textContent = `${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
+        
+        // Obtener el primer día del mes y el último día del mes
+        const firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+        const lastDay = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+        
+        // Obtener el día de la semana del primer día (0 = Domingo, 6 = Sábado)
+        const firstDayOfWeek = firstDay.getDay();
+        
+        // Obtener el último día del mes anterior para rellenar días vacíos
+        const prevMonthLastDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
+        
+        // Rellenar días del mes anterior (si es necesario)
+        for (let i = firstDayOfWeek - 1; i >= 0; i--) {
+            const dayElement = createDayElement(prevMonthLastDay - i, true);
+            calendarGrid.appendChild(dayElement);
+        }
+        
+        // Rellenar días del mes actual
+        for (let i = 1; i <= lastDay.getDate(); i++) {
+            const dayElement = createDayElement(i, false);
+            
+            // Marcar el día si está seleccionado
+            if (selectedDate && 
+                selectedDate.getDate() === i && 
+                selectedDate.getMonth() === currentDate.getMonth() && 
+                selectedDate.getFullYear() === currentDate.getFullYear()) {
+                dayElement.classList.add('bg-blue-200', 'font-bold');
+            }
+            
+            // Marcar días con citas (ejemplo: 10 y 15 de mayo)
+            if (i === 10 || i === 15) {
+                dayElement.classList.add('border-2', 'border-blue-500');
+            }
+            
+            calendarGrid.appendChild(dayElement);
+        }
+        
+        // Calcular cuántos días del próximo mes necesitamos mostrar
+        const totalDaysShown = firstDayOfWeek + lastDay.getDate();
+        const remainingCells = 42 - totalDaysShown; // 6 semanas * 7 días = 42 celdas
+        
+        // Rellenar días del próximo mes (si es necesario)
+        for (let i = 1; i <= remainingCells; i++) {
+            const dayElement = createDayElement(i, true);
+            calendarGrid.appendChild(dayElement);
+        }
+    }
+    
+    // Función para crear un elemento de día
+    function createDayElement(day, isOtherMonth) {
+        const dayElement = document.createElement('div');
+        dayElement.className = `day p-2 h-24 border border-gray-200 rounded-lg ${isOtherMonth ? 'bg-gray-100 text-gray-400' : 'bg-white hover:bg-blue-50 cursor-pointer'} flex flex-col`;
+        dayElement.innerHTML = `
+            <div class="text-right">${day}</div>
+            <div class="note-preview text-xs mt-1 overflow-hidden text-ellipsis flex-grow"></div>
+        `;
+        
+        // Obtener referencia al contenedor de la nota
+        const notePreview = dayElement.querySelector('.note-preview');
+        
+        // Solo agregar eventos de clic a los días del mes actual
+        if (!isOtherMonth) {
+            const dateKey = formatDateKey(new Date(currentDate.getFullYear(), currentDate.getMonth(), day));
+            
+            // Mostrar nota si existe
+            if (notes[dateKey]) {
+                notePreview.textContent = notes[dateKey];
+                notePreview.classList.add('text-blue-600');
+            }
+            
+            dayElement.addEventListener('click', () => {
+                // Actualizar la fecha seleccionada
+                selectedDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+                
+                // Actualizar la visualización
+                updateSelectedDateDisplay();
+                
+                // Resaltar el día seleccionado
+                document.querySelectorAll('.day').forEach(el => {
+                    el.classList.remove('bg-blue-200', 'font-bold');
+                });
+                dayElement.classList.add('bg-blue-200', 'font-bold');
+                
+                // Cargar notas para este día
+                loadNotesForSelectedDate();
+            });
+        }
+        
+        return dayElement;
+    }
+    
+    // Función para actualizar la visualización de la fecha seleccionada
+    function updateSelectedDateDisplay() {
+        if (selectedDate) {
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            selectedDateDisplay.textContent = selectedDate.toLocaleDateString('es-ES', options);
+        } else {
+            selectedDateDisplay.textContent = 'Selecciona un día';
+        }
+    }
+    
+    // Función para cargar notas para la fecha seleccionada
+    function loadNotesForSelectedDate() {
+        if (selectedDate) {
+            const dateKey = formatDateKey(selectedDate);
+            dayNotes.value = notes[dateKey] || '';
+        } else {
+            dayNotes.value = '';
+        }
+    }
+    
+    // Función para formatear la clave de fecha (YYYY-MM-DD)
+    function formatDateKey(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    }
+    
+    // Event listeners para navegación entre meses
+    prevMonthBtn.addEventListener('click', () => {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        renderCalendar();
+    });
+    
+    nextMonthBtn.addEventListener('click', () => {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        renderCalendar();
+    });
+    
+    // Event listener para guardar notas
+    saveNoteBtn.addEventListener('click', () => {
+        if (selectedDate) {
+            const dateKey = formatDateKey(selectedDate);
+            notes[dateKey] = dayNotes.value.trim();
+            
+            // Guardar en localStorage
+            localStorage.setItem('calendarNotes', JSON.stringify(notes));
+            
+            // Volver a renderizar para mostrar la nota en el día
+            renderCalendar();
+            
+            // Limpiar el textarea
+            dayNotes.value = '';
+            
+            // Mostrar feedback visual en lugar de alert
+            const feedback = document.createElement('div');
+            feedback.textContent = 'Nota guardada';
+            feedback.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg';
+            document.body.appendChild(feedback);
+            
+            setTimeout(() => {
+                feedback.remove();
+            }, 2000);
+        } else {
+            alert('Por favor, selecciona un día primero');
+        }
+    });
+    
+    // Renderizar el calendario inicial
+    renderCalendar();
+});
+</script>
 </main>
 
 
-
-<footer class="bg-gray-100 border-t border-black py-12 font-mono">
-    <div class="container mx-auto px-10">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Columna 1: Logo -->
-            <div class="flex flex-col items-center md:items-start">
-                <a href="dashboard.html" class="mb-4">
-                    <img src="../../recursos/img/Login.png" alt="Logo" class="h-16" />
-                </a>
-                <p class="text-gray-700 text-sm">
-                    © 2024 Tu Empresa. Todos los derechos reservados.
-                </p>
-            </div>
-
-            <!-- Columna 2: Enlaces rápidos -->
-            <div class="flex flex-col items-center md:items-start">
-                <h3 class="text-lg font-bold mb-4">Enlaces rápidos</h3>
-                <ul class="space-y-2">
-                    <li>
-                        <a href="#" class="text-gray-700 hover:text-black transition">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-gray-700 hover:text-black transition">Chat</a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-gray-700 hover:text-black transition">Citas</a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-gray-700 hover:text-black transition">Receta</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Columna 3: Redes sociales -->
-            <div class="flex flex-col items-center md:items-start">
-                <h3 class="text-lg font-bold mb-4">Síguenos</h3>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-700 hover:text-blue-500 transition">
-                        <i class="fab fa-facebook text-3xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-700 hover:text-pink-500 transition">
-                        <i class="fab fa-instagram text-3xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-700 hover:text-blue-400 transition">
-                        <i class="fab fa-twitter text-3xl"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Copyright -->
-        <div class="border-t border-gray-300 mt-6 pt-4 text-center text-sm text-gray-600">
-            <p>© 2024 CattusCare. Todos los derechos reservados.</p>
-        </div>
-    </div>
-</footer>
 
 <script>
     document
@@ -236,9 +407,6 @@
         : "Dark Mode";
     });
 </script>
-
-
-
 
 </body>
 </html>

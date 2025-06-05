@@ -11,15 +11,13 @@
     <link rel="icon" href="/recursos/img/icon/Login.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-
     <title>CattusCare</title>
 </head>
 <body>
 <nav class="vertical-bar">
     <div class="logo"></div>
     <div class="iconos">
-
-<a href="/vistas/publico/index.html" class="icono-con-texto">
+        <a href="/vistas/publico/index.html" class="icono-con-texto">
             <svg class="hero-icon" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z"/>
                 <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z"/>
@@ -57,59 +55,49 @@
         </a>
     </div>
 
-<div class="flex flex-col w-full items-center gap-1"> <!-- Reduje el gap general -->
-    <!-- Premium (ahora con estilo idéntico a Dark Mode) -->
-
-<div class="w-full px-4 pt-3">
-    <button href="#" id="premiumToggle" class="flex items-center gap-2 w-full px-4 py-2 rounded-full transition-all transform hover:scale-[1.02] active:scale-95 shadow-md hover:shadow-lg">
-        <!-- Fondo con gradiente dorado brillante -->
-        <div class="absolute inset-0 bg-gradient-to-r from-[#FFD700] via-[#FFEC8B] to-[#FFD700] rounded-full opacity-90 hover:opacity-100 transition-opacity"></div>
-
+    <div class="flex flex-col w-full items-center gap-1">
+        <div class="w-full px-4 pt-3">
+            <button href="#" id="premiumToggle" class="flex items-center gap-2 w-full px-4 py-2 rounded-full transition-all transform hover:scale-[1.02] active:scale-95 shadow-md hover:shadow-lg">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#FFD700] via-[#FFEC8B] to-[#FFD700] rounded-full opacity-90 hover:opacity-100 transition-opacity"></div>
                 <div class="relative z-10 flex items-center gap-2 w-full justify-center">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M1 4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4Zm12 4a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM4 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm13-1a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM1.75 14.5a.75.75 0 0 0 0 1.5c4.417 0 8.693.603 12.749 1.73 1.111.309 2.251-.512 2.251-1.696v-.784a.75.75 0 0 0-1.5 0v.784a.272.272 0 0 1-.35.25A49.043 49.043 0 0 0 1.75 14.5Z" clip-rule="evenodd"/>
-            </svg> 
-            <span id="premiumText" class="font-medium text-gray-800 drop-shadow-sm">Premium</span>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M1 4a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4Zm12 4a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM4 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm13-1a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM1.75 14.5a.75.75 0 0 0 0 1.5c4.417 0 8.693.603 12.749 1.73 1.111.309 2.251-.512 2.251-1.696v-.784a.75.75 0 0 0-1.5 0v.784a.272.272 0 0 1-.35.25A49.043 49.043 0 0 0 1.75 14.5Z" clip-rule="evenodd"/>
+                    </svg> 
+                    <span id="premiumText" class="font-medium text-gray-800 drop-shadow-sm">Premium</span>
+                </div>
+            </button>
         </div>
-    </button>
-</div>
 
-    <!-- Dark Mode (conserva su estilo) -->
-    <div class="w-full px-4 pt-3"">
-        <button id="darkModeToggle" class="flex items-center gap-2 w-full px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 transition-colors">
-            <i id="darkModeIcon" class="fas fa-moon"></i>
-            <span id="darkModeText">Dark Mode</span>
-        </button>
-    </div>
+        <div class="w-full px-4 pt-3">
+            <button id="darkModeToggle" class="flex items-center gap-2 w-full px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 transition-colors">
+                <i id="darkModeIcon" class="fas fa-moon"></i>
+                <span id="darkModeText">Dark Mode</span>
+            </button>
+        </div>
 
-
-    <!-- Perfil (estilo original sin fondo) -->
         <div class="profile-container">
             <a href="/vistas/publico/perfilpub.html" class="icono-con-texto">
-            <svg class="hero-icon" fill="currentColor" viewBox="0 0 24 24">
-                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd"/>
-            </svg>
-            <span class="icono-texto">Perfil</span>
+                <svg class="hero-icon" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd"/>
+                </svg>
+                <span class="icono-texto">Perfil</span>
             </a>
         </div>
-        
+    </div>
 </nav>
 
-
-
-
-
-     <main class="content-area">
-        <div class="premium">
-            <div class="premium-arriba">
-                <h2 class="premium-h1">Suscripcion</h2>
-                <hr class="linea">
-            </div>
-            
-            <div class="cards-container">
-                <!-- Carta Izquierda -->
-
-                                <div class="free-card">
+<main class="content-area">
+    <div class="premium">
+        <div class="premium-arriba">
+            <h2 class="premium-h1">Suscripciones</h2>
+            <hr class="linea">
+        </div>
+        
+        <div class="cards-container">
+            <!-- Primera fila: Free y Pro -->
+            <div class="cards-row">
+                <!-- Tarjeta Free -->
+                <div class="free-card">
                     <div class="premium-header">
                         <div class="premium-badge2">Free</div>
                     </div>
@@ -160,7 +148,7 @@
                             Puedes unirte a plan pro en cualquier momento 
                         </li>
 
-                            <li class="feature-item">
+                        <li class="feature-item">
                             <span class="icon x-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM8.28 7.22a.75.75 0 0 0-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 1 0 1.06 1.06L10 11.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L11.06 10l1.72-1.72a.75.75 0 0 0-1.06-1.06L10 8.94 8.28 7.22Z" clip-rule="evenodd"/>
@@ -170,9 +158,11 @@
                         </li>
                     </ul>
                 </div>
+
+                <!-- Tarjeta Pro (RECOMENDADO) -->
                 <div class="premium-card">
                     <div class="premium-header">
-                        <div class="premium-badge">🔥 Más popular</div>
+                        <div class="premium-badge">Más popular</div>
                     </div>
                     
                     <div class="price-section">
@@ -240,15 +230,19 @@
                         </li>
                     </ul>
                     
-                    <button class="subscribe-button">Subscribete</button>
-                    <div class="wompi_button_widget" data-url-pago="https://pagos.wompi.sv/IntentoPago/Redirect?id=7e9eec7c-a6f1-4d1b-bcef-04ce93b14267&esWidget=1" data-render="widget"></div>
-                    
+                    <button class="subscribe-button">Suscríbete</button>
+                    <div class="wompi_button_widget" data-url-pago="https://pagos.wompi.sv/IntentoPago/Redirect?id=7e9eec7c-a6f1-4d1b-bcef-04ce93b14267&esWidget=1" data-render="widget">
+                        <a href="https://pagos.wompi.sv/IntentoPago/Redirect?id=7e9eec7c-a6f1-4d1b-bcef-04ce93b14267&esWidget=1" style="text-decoration:none; color:inherit;">Paga con Wompi</a>
+                    </div>
                 </div>
+            </div>
 
-
+            <!-- Segunda fila: Semi Pro x2 -->
+            <div class="cards-row">
+                <!-- Tarjeta Semi Pro 1 -->
                 <div class="premium-card2">
                     <div class="premium-header">
-                        <div class="premium-badge">🔥 Más popular</div>
+                        <div class="premium-badge">Más popular</div>
                     </div>
                     
                     <div class="price-section">
@@ -316,91 +310,98 @@
                         </li>
                     </ul>
                     
-                    <button class="subscribe-button">Subscribete</button>
+                    <button class="subscribe-button">Suscríbete</button>
                 </div>
 
-                
-                
-                <!-- Carta Derecha -->
-
-            </div>
-        </div>
-    </main>
-
-
-
-
-
-
-<footer class="bg-gray-100 border-t border-black py-12 font-mono">
-    <div class="container mx-auto px-10">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Columna 1: Logo -->
-            <div class="flex flex-col items-center md:items-start">
-                <a href="dashboard.html" class="mb-4">
-                    <img src="../../recursos/img/Login.png" alt="Logo" class="h-16" />
-                </a>
-                <p class="text-gray-700 text-sm">
-                    © 2024 Tu Empresa. Todos los derechos reservados.
-                </p>
-            </div>
-
-            <!-- Columna 2: Enlaces rápidos -->
-            <div class="flex flex-col items-center md:items-start">
-                <h3 class="text-lg font-bold mb-4">Enlaces rápidos</h3>
-                <ul class="space-y-2">
-                    <li>
-                        <a href="#" class="text-gray-700 hover:text-black transition">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-gray-700 hover:text-black transition">Chat</a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-gray-700 hover:text-black transition">Citas</a>
-                    </li>
-                    <li>
-                        <a href="#" class="text-gray-700 hover:text-black transition">Receta</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Columna 3: Redes sociales -->
-            <div class="flex flex-col items-center md:items-start">
-                <h3 class="text-lg font-bold mb-4">Síguenos</h3>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-700 hover:text-blue-500 transition">
-                        <i class="fab fa-facebook text-3xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-700 hover:text-pink-500 transition">
-                        <i class="fab fa-instagram text-3xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-700 hover:text-blue-400 transition">
-                        <i class="fab fa-twitter text-3xl"></i>
-                    </a>
+                <!-- Tarjeta Semi Pro 2 -->
+                <div class="premium-card2">
+                    <div class="premium-header">
+                        <div class="premium-badge">Más popular</div>
+                    </div>
+                    
+                    <div class="price-section">
+                        <div>
+                            <span class="plan">Plan Semi Pro</span>
+                            <br>
+                            <span class="price">$8/Mensuales</span>
+                        </div>
+                        <p class="price-description">Recomendado para pacientes que seguiran semanal su seguimiento medico</p>
+                    </div>
+                    
+                    <ul class="features-list">
+                        <li class="feature-item">
+                            <span class="icon check-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/>
+                                </svg>
+                            </span>
+                            Accesos a 5 doctores Mensuales
+                        </li>
+                        
+                        <li class="feature-item">
+                            <span class="icon check-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/>
+                                </svg>
+                            </span>
+                            Acceso ilimitado a calendario y recordatorios
+                        </li>
+                        
+                        <li class="feature-item">
+                            <span class="icon check-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd"/>
+                                </svg>
+                            </span>
+                            Alarmas
+                        </li>
+                        
+                        <li class="feature-item">
+                            <span class="icon warning-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.339 2.237a.531.531 0 0 0-.678 0 11.947 11.947 0 0 1-7.078 2.75.5.5 0 0 0-.479.425A12.11 12.11 0 0 0 2 7c0 5.163 3.26 9.564 7.834 11.257a.48.48 0 0 0 .332 0C14.74 16.564 18 12.163 18 7c0-.538-.035-1.069-.104-1.589a.5.5 0 0 0-.48-.425 11.947 11.947 0 0 1-7.077-2.75ZM10 6a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 10 6Zm0 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd"/>
+                                </svg>
+                            </span>
+                            Puedes cancelar en cualquier momento antes de la fecha de renovación
+                        </li>
+                        
+                        <li class="feature-item">
+                            <span class="icon warning-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.339 2.237a.531.531 0 0 0-.678 0 11.947 11.947 0 0 1-7.078 2.75.5.5 0 0 0-.479.425A12.11 12.11 0 0 0 2 7c0 5.163 3.26 9.564 7.834 11.257a.48.48 0 0 0 .332 0C14.74 16.564 18 12.163 18 7c0-.538-.035-1.069-.104-1.589a.5.5 0 0 0-.48-.425 11.947 11.947 0 0 1-7.077-2.75ZM10 6a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 10 6Zm0 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" clip-rule="evenodd"/>
+                                </svg>
+                            </span>
+                            Los pagos se renovarán automáticamente cada mes
+                        </li>
+                        
+                        <li class="feature-item">
+                            <span class="icon x-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM8.28 7.22a.75.75 0 0 0-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 1 0 1.06 1.06L10 11.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L11.06 10l1.72-1.72a.75.75 0 0 0-1.06-1.06L10 8.94 8.28 7.22Z" clip-rule="evenodd"/>
+                                </svg>
+                            </span>
+                            No se hacen reembolsos una vez procesado el pago
+                        </li>
+                    </ul>
+                    
+                    <button class="subscribe-button">Suscríbete</button>
                 </div>
             </div>
-        </div>
-
-        <!-- Copyright -->
-        <div class="border-t border-gray-300 mt-6 pt-4 text-center text-sm text-gray-600">
-            <p>© 2024 CattusCare. Todos los derechos reservados.</p>
         </div>
     </div>
-</footer>
+</main>
 
 
 <script>
-    document
-    .getElementById("darkModeToggle")
-    .addEventListener("click", () => {
+    document.getElementById("darkModeToggle").addEventListener("click", () => {
         document.documentElement.classList.toggle("dark");
         const icon = document.getElementById("darkModeIcon");
         const text = document.getElementById("darkModeText");
         icon.classList.toggle("fa-moon");
         icon.classList.toggle("fa-sun");
         text.textContent = document.documentElement.classList.contains("dark")
-        ? "Light Mode"
-        : "Dark Mode";
+            ? "Light Mode"
+            : "Dark Mode";
     });
 </script>
 <script src="https://pagos.wompi.sv/js/wompi.pagos.js"></script>

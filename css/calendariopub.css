@@ -23,16 +23,6 @@ body {
     z-index: 10;
 }
 
-.content-area {
-    margin-left: 207px;
-    flex: 1;
-    min-height: 100vh;
-    background-color: #CBD5E1;
-    padding: 20px;
-    position: relative;
-}
-
-
 
 .main-content {
     margin-right: 220px;
@@ -321,8 +311,6 @@ footer {
 .dark .hero-icon {
     color: #e5e7eb;
 }
-
-
 
 
 
