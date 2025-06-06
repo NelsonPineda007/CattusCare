@@ -274,49 +274,6 @@ body {
     color: #dc3545;
 }
 
-/* Button Styling */
-.subscribe-button {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background-color: #8b8b8b;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 30px;
-}
-
-.subscribe-button:hover {
-    background-color: #000000;
-}
-
-/* Wompi Button Styling */
-.wompi_button_widget {
-    margin-top: 1rem;
-}
-
-.wompi_button_widget a {
-    display: block;
-    background: linear-gradient(to right, #00aaff, #0077cc) !important;
-    color: white !important;
-    padding: 1rem !important;
-    border-radius: 8px !important;
-    text-align: center !important;
-    font-weight: 600 !important;
-    text-decoration: none !important;
-    border: none !important;
-    transition: all 0.3s ease !important;
-}
-
-.wompi_button_widget a:hover {
-    background: linear-gradient(to right, #0095e6, #0066aa) !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
-}
 
 /* Premium Badge Styling */
 .premium-badge {
