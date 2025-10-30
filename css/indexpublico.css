@@ -96,6 +96,7 @@ body {
     padding: 1rem 0;
 }
 
+
 .iconos {
     flex: 1; 
 }
@@ -409,5 +410,35 @@ body {
     cursor: pointer;
     margin-top: auto;
 }
+
+  #premiumToggle {
+        position: relative;
+        overflow: hidden;
+        border: none;
+        background: none;
+    }
+    
+    #premiumToggle::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+        transform: rotate(30deg);
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    
+    #premiumToggle:hover::before {
+        opacity: 0.6;
+        animation: shine 2s infinite;
+    }
+    
+    @keyframes shine {
+        0% { transform: translateX(-100%) rotate(30deg); }
+        100% { transform: translateX(100%) rotate(30deg); }
+    }
 
 
